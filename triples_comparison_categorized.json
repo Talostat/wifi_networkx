@@ -1,0 +1,177 @@
+{
+  "metadata": {
+    "sources": [
+      "summary.json"
+    ]
+  },
+  "data": {
+    "summary": {
+      "events": [
+        {
+          "event_id": "E1",
+          "event_name": "規劃出門行程",
+          "main_subjects": [
+            "Kiwi",
+            "MANUKA"
+          ],
+          "triples": [
+            [
+              "Kiwi",
+              "結伴",
+              "MANUKA",
+              "person_person"
+            ],
+            [
+              "MANUKA",
+              "自稱",
+              "狐狸",
+              "person_object"
+            ],
+            [
+              "Kiwi",
+              "出發從",
+              "家中",
+              "person_location"
+            ],
+            [
+              "MANUKA",
+              "出發從",
+              "家中",
+              "person_location"
+            ],
+            [
+              "家中",
+              "發生",
+              "規劃外出行程",
+              "location_event"
+            ]
+          ]
+        },
+        {
+          "event_id": "E2",
+          "event_name": "前往飲料店",
+          "main_subjects": [
+            "Kiwi",
+            "MANUKA"
+          ],
+          "triples": [
+            [
+              "Kiwi",
+              "前往",
+              "飲料店",
+              "person_location"
+            ],
+            [
+              "MANUKA",
+              "前往",
+              "飲料店",
+              "person_location"
+            ],
+            [
+              "飲料店",
+              "位置",
+              "車站前",
+              "location_event"
+            ],
+            [
+              "飲料店",
+              "發生",
+              "購買飲料",
+              "location_event"
+            ]
+          ]
+        },
+        {
+          "event_id": "E3",
+          "event_name": "前往服飾店與零食店",
+          "main_subjects": [
+            "Kiwi",
+            "MANUKA"
+          ],
+          "triples": [
+            [
+              "Kiwi",
+              "前往",
+              "大型服飾店",
+              "person_location"
+            ],
+            [
+              "MANUKA",
+              "前往",
+              "大型服飾店",
+              "person_location"
+            ],
+            [
+              "Kiwi",
+              "前往",
+              "零食店",
+              "person_location"
+            ],
+            [
+              "MANUKA",
+              "前往",
+              "零食店",
+              "person_location"
+            ]
+          ]
+        },
+        {
+          "event_id": "E4",
+          "event_name": "前往公園",
+          "main_subjects": [
+            "Kiwi",
+            "MANUKA"
+          ],
+          "triples": [
+            [
+              "Kiwi",
+              "前往",
+              "公園",
+              "person_location"
+            ],
+            [
+              "MANUKA",
+              "前往",
+              "公園",
+              "person_location"
+            ],
+            [
+              "公園",
+              "發生",
+              "休息坐坐",
+              "location_event"
+            ]
+          ]
+        },
+        {
+          "event_id": "E5",
+          "event_name": "過馬路",
+          "main_subjects": [
+            "Kiwi",
+            "MANUKA"
+          ],
+          "triples": [
+            [
+              "Kiwi",
+              "經過",
+              "馬路",
+              "person_location"
+            ],
+            [
+              "MANUKA",
+              "經過",
+              "馬路",
+              "person_location"
+            ],
+            [
+              "Kiwi",
+              "牽手",
+              "MANUKA",
+              "person_person"
+            ]
+          ]
+        }
+      ]
+    }
+  }
+}
