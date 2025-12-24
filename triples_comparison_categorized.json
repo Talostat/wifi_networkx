@@ -1,177 +1,910 @@
 {
   "metadata": {
     "sources": [
-      "summary.json"
+      "messages"
     ]
   },
   "data": {
-    "summary": {
-      "events": [
-        {
-          "event_id": "E1",
-          "event_name": "規劃出門行程",
-          "main_subjects": [
-            "Kiwi",
-            "MANUKA"
-          ],
-          "triples": [
-            [
-              "Kiwi",
-              "結伴",
-              "MANUKA",
-              "person_person"
-            ],
-            [
-              "MANUKA",
-              "自稱",
-              "狐狸",
-              "person_object"
-            ],
-            [
-              "Kiwi",
-              "出發從",
-              "家中",
-              "person_location"
-            ],
-            [
-              "MANUKA",
-              "出發從",
-              "家中",
-              "person_location"
-            ],
-            [
-              "家中",
-              "發生",
-              "規劃外出行程",
-              "location_event"
-            ]
-          ]
-        },
-        {
-          "event_id": "E2",
-          "event_name": "前往飲料店",
-          "main_subjects": [
-            "Kiwi",
-            "MANUKA"
-          ],
-          "triples": [
-            [
-              "Kiwi",
-              "前往",
-              "飲料店",
-              "person_location"
-            ],
-            [
-              "MANUKA",
-              "前往",
-              "飲料店",
-              "person_location"
-            ],
-            [
-              "飲料店",
-              "位置",
-              "車站前",
-              "location_event"
-            ],
-            [
-              "飲料店",
-              "發生",
-              "購買飲料",
-              "location_event"
-            ]
-          ]
-        },
-        {
-          "event_id": "E3",
-          "event_name": "前往服飾店與零食店",
-          "main_subjects": [
-            "Kiwi",
-            "MANUKA"
-          ],
-          "triples": [
-            [
-              "Kiwi",
-              "前往",
-              "大型服飾店",
-              "person_location"
-            ],
-            [
-              "MANUKA",
-              "前往",
-              "大型服飾店",
-              "person_location"
-            ],
-            [
-              "Kiwi",
-              "前往",
-              "零食店",
-              "person_location"
-            ],
-            [
-              "MANUKA",
-              "前往",
-              "零食店",
-              "person_location"
-            ]
-          ]
-        },
-        {
-          "event_id": "E4",
-          "event_name": "前往公園",
-          "main_subjects": [
-            "Kiwi",
-            "MANUKA"
-          ],
-          "triples": [
-            [
-              "Kiwi",
-              "前往",
-              "公園",
-              "person_location"
-            ],
-            [
-              "MANUKA",
-              "前往",
-              "公園",
-              "person_location"
-            ],
-            [
-              "公園",
-              "發生",
-              "休息坐坐",
-              "location_event"
-            ]
-          ]
-        },
-        {
-          "event_id": "E5",
-          "event_name": "過馬路",
-          "main_subjects": [
-            "Kiwi",
-            "MANUKA"
-          ],
-          "triples": [
-            [
-              "Kiwi",
-              "經過",
-              "馬路",
-              "person_location"
-            ],
-            [
-              "MANUKA",
-              "經過",
-              "馬路",
-              "person_location"
-            ],
-            [
-              "Kiwi",
-              "牽手",
-              "MANUKA",
-              "person_person"
-            ]
-          ]
-        }
-      ]
-    }
+    "messages": [
+      {
+        "entities": [
+          {
+            "entity_name": "Kiwi",
+            "entity_type": "人物",
+            "entity_description": "對話中的一位參與者，與MANUKA一同出門，性格溫和，常被MANUKA調侃"
+          },
+          {
+            "entity_name": "MANUKA",
+            "entity_type": "人物",
+            "entity_description": "對話中的主要發言者，性格活潑、自信、俏皮，自稱狐狸，喜歡規劃行程"
+          },
+          {
+            "entity_name": "車站前新開的飲料店",
+            "entity_type": "地點",
+            "entity_description": "MANUKA規劃的行程中的第一站，位於車站前，是一家新開的飲料店"
+          },
+          {
+            "entity_name": "很大的服飾店",
+            "entity_type": "地點",
+            "entity_description": "MANUKA規劃的行程中的第二站，是一間規模很大的服飾店"
+          },
+          {
+            "entity_name": "零食店",
+            "entity_type": "地點",
+            "entity_description": "MANUKA規劃的行程中的第三站，計劃前往掃貨購買零食"
+          },
+          {
+            "entity_name": "公園",
+            "entity_type": "地點",
+            "entity_description": "MANUKA規劃的行程中的最後一站，計劃去那裡坐坐"
+          },
+          {
+            "entity_name": "貓",
+            "entity_type": "動物",
+            "entity_description": "在路上看到的一隻貓，毛茸茸的可愛，尾巴被MANUKA拿來與自己的狐狸耳朵比較"
+          },
+          {
+            "entity_name": "狐狸耳朵",
+            "entity_type": "身體特徵",
+            "entity_description": "MANUKA自稱擁有的耳朵特徵，認為比貓的尾巴更可愛"
+          },
+          {
+            "entity_name": "直播",
+            "entity_type": "活動",
+            "entity_description": "MANUKA從事的線上直播活動，有觀眾參與"
+          },
+          {
+            "entity_name": "觀眾",
+            "entity_type": "人物",
+            "entity_description": "觀看MANUKA直播的人，曾送她一個大貼圖"
+          },
+          {
+            "entity_name": "貼圖",
+            "entity_type": "物品",
+            "entity_description": "觀眾送給MANUKA的禮物，上面說她吃東西的樣子像倉鼠"
+          },
+          {
+            "entity_name": "倉鼠",
+            "entity_type": "動物",
+            "entity_description": "一種小型囓齒動物，被觀眾用來比喻MANUKA吃東西的樣子"
+          }
+        ],
+        "relationships": [
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "Kiwi",
+            "relationship_description": "催促Kiwi出門，並規劃行程",
+            "relationship_strength": 8
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "車站前新開的飲料店",
+            "relationship_description": "計劃前往作為行程第一站",
+            "relationship_strength": 9
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "很大的服飾店",
+            "relationship_description": "計劃前往作為行程第二站",
+            "relationship_strength": 9
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "零食店",
+            "relationship_description": "計劃前往掃貨作為行程第三站",
+            "relationship_strength": 10
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "公園",
+            "relationship_description": "計劃前往作為行程最後一站",
+            "relationship_strength": 8
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "貓",
+            "relationship_description": "看到貓並評論其可愛，比較尾巴與自己的耳朵",
+            "relationship_strength": 6
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "狐狸耳朵",
+            "relationship_description": "擁有並認為比貓尾巴更可愛",
+            "relationship_strength": 10
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "直播",
+            "relationship_description": "從事直播活動",
+            "relationship_strength": 8
+          },
+          {
+            "source_entity": "觀眾",
+            "target_entity": "MANUKA",
+            "relationship_description": "觀看直播並送貼圖",
+            "relationship_strength": 5
+          },
+          {
+            "source_entity": "觀眾",
+            "target_entity": "貼圖",
+            "relationship_description": "贈送貼圖給MANUKA",
+            "relationship_strength": 7
+          },
+          {
+            "source_entity": "貼圖",
+            "target_entity": "倉鼠",
+            "relationship_description": "內容將MANUKA吃東西的樣子比喻為倉鼠",
+            "relationship_strength": 8
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "倉鼠",
+            "relationship_description": "被比喻為倉鼠但否認，強調自己是狐狸",
+            "relationship_strength": 7
+          },
+          {
+            "source_entity": "Kiwi",
+            "target_entity": "MANUKA",
+            "relationship_description": "順從MANUKA的規劃，牽手過馬路，並同意請客",
+            "relationship_strength": 8
+          }
+        ]
+      },
+      {
+        "entities": [
+          {
+            "entity_name": "Kiwi",
+            "entity_type": "人物",
+            "entity_description": "對話中的一位角色，被MANUKA拉著去飲料店，負責點餐和拿飲料，性格較為無奈但順從"
+          },
+          {
+            "entity_name": "MANUKA",
+            "entity_type": "人物",
+            "entity_description": "對話中的主要角色，暱稱MANUKA大人，個性活潑、任性、喜歡甜食和可愛的東西，熱衷於拍照上傳社群"
+          },
+          {
+            "entity_name": "飲料店",
+            "entity_type": "地點",
+            "entity_description": "Kiwi和MANUKA前往購買飲料的地點，提供多種新品飲料，裝潢漂亮，並提供愛心造型杯蓋和星星造型吸管"
+          },
+          {
+            "entity_name": "芒果百香雙響炮",
+            "entity_type": "物品",
+            "entity_description": "飲料店菜單上的新品飲料之一"
+          },
+          {
+            "entity_name": "草莓雲朵奶蓋",
+            "entity_type": "物品",
+            "entity_description": "飲料店菜單上的新品飲料之一"
+          },
+          {
+            "entity_name": "薄荷巧克力脆脆冰",
+            "entity_type": "物品",
+            "entity_description": "飲料店菜單上的新品飲料之一"
+          },
+          {
+            "entity_name": "草莓奶蓋",
+            "entity_type": "物品",
+            "entity_description": "MANUKA最終選擇的飲料，要求全糖、正常冰塊，並加珍珠"
+          },
+          {
+            "entity_name": "愛心造型杯蓋",
+            "entity_type": "物品",
+            "entity_description": "飲料店提供的特殊杯蓋，MANUKA特別要求使用"
+          },
+          {
+            "entity_name": "星星造型吸管",
+            "entity_type": "物品",
+            "entity_description": "飲料店提供的吸管造型，MANUKA對此感到驚喜"
+          },
+          {
+            "entity_name": "珍珠",
+            "entity_type": "物品",
+            "entity_description": "MANUKA要求加入草莓奶蓋中的配料"
+          },
+          {
+            "entity_name": "社群",
+            "entity_type": "概念",
+            "entity_description": "MANUKA打算拍照上傳的社交媒體平台"
+          }
+        ],
+        "relationships": [
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "Kiwi",
+            "relationship_description": "拉著Kiwi走到飲料店前",
+            "relationship_strength": 7
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "飲料店",
+            "relationship_description": "在飲料店前興奮地查看菜單新品",
+            "relationship_strength": 8
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "草莓奶蓋",
+            "relationship_description": "選擇並點購草莓奶蓋，要求全糖、正常冰塊",
+            "relationship_strength": 9
+          },
+          {
+            "source_entity": "Kiwi",
+            "target_entity": "飲料店",
+            "relationship_description": "走向點餐櫃檯為MANUKA點飲料",
+            "relationship_strength": 6
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "愛心造型杯蓋",
+            "relationship_description": "要求店員提供愛心造型杯蓋",
+            "relationship_strength": 8
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "珍珠",
+            "relationship_description": "要求Kiwi點餐時在草莓奶蓋中加入珍珠",
+            "relationship_strength": 7
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "社群",
+            "relationship_description": "計畫拍攝飲料店裝潢上傳到社群",
+            "relationship_strength": 8
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "Kiwi",
+            "relationship_description": "要求Kiwi幫忙拿飲料以便空出手自拍",
+            "relationship_strength": 8
+          },
+          {
+            "source_entity": "Kiwi",
+            "target_entity": "MANUKA",
+            "relationship_description": "拿著兩杯飲料走回來交給MANUKA",
+            "relationship_strength": 7
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "星星造型吸管",
+            "relationship_description": "對星星造型吸管感到驚喜",
+            "relationship_strength": 7
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "Kiwi",
+            "relationship_description": "要求交換喝Kiwi的無糖飲料",
+            "relationship_strength": 6
+          }
+        ]
+      },
+      {
+        "entities": [
+          {
+            "entity_name": "Kiwi",
+            "entity_type": "人物",
+            "entity_description": "對話中的一方，對健康比較重視，審美觀被MANUKA吐槽，性格較為內斂"
+          },
+          {
+            "entity_name": "MANUKA",
+            "entity_type": "人物",
+            "entity_description": "對話中的另一方，認為快樂最重要，喜歡可愛飾品，對狐狸造型有特別偏好，性格活潑外向"
+          },
+          {
+            "entity_name": "狐狸耳朵發箍",
+            "entity_type": "物品",
+            "entity_description": "服飾店中的裝飾品，MANUKA試戴的飾品之一，與MANUKA原有的狐狸耳朵造型相配"
+          },
+          {
+            "entity_name": "兔子耳朵發箍",
+            "entity_type": "物品",
+            "entity_description": "服飾店中的裝飾品，MANUKA試戴的另一個飾品，與狐狸耳朵發箍風格不同"
+          },
+          {
+            "entity_name": "貓耳發箍",
+            "entity_type": "物品",
+            "entity_description": "服飾店中的另一個飾品，MANUKA在發現狐狸和兔子發箍後注意到的第三個選擇"
+          },
+          {
+            "entity_name": "小狐狸吊飾項煉",
+            "entity_type": "物品",
+            "entity_description": "會發光的項煉，上面有小狐狸吊飾，MANUKA認為與自己的造型很配"
+          },
+          {
+            "entity_name": "小鈴鐺手煉",
+            "entity_type": "物品",
+            "entity_description": "帶有小鈴鐺的手煉，MANUKA認為很可愛，走路時會發出叮當聲"
+          },
+          {
+            "entity_name": "發帶",
+            "entity_type": "物品",
+            "entity_description": "與MANUKA領帶顏色相配的發帶，MANUKA詢問Kiwi意見的另一個飾品"
+          },
+          {
+            "entity_name": "服飾店",
+            "entity_type": "地點",
+            "entity_description": "裝潢可愛的商店，Kiwi和MANUKA進入購物的地方"
+          },
+          {
+            "entity_name": "健康",
+            "entity_type": "概念",
+            "entity_description": "Kiwi認為比較重要的價值觀"
+          },
+          {
+            "entity_name": "快樂",
+            "entity_type": "概念",
+            "entity_description": "MANUKA認為最重要的價值觀"
+          }
+        ],
+        "relationships": [
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "Kiwi",
+            "relationship_description": "與Kiwi一起逛街購物，詢問Kiwi對飾品的意見",
+            "relationship_strength": 7
+          },
+          {
+            "source_entity": "Kiwi",
+            "target_entity": "MANUKA",
+            "relationship_description": "陪伴MANUKA逛街，對MANUKA的飾品選擇提供有限反饋",
+            "relationship_strength": 6
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "狐狸耳朵發箍",
+            "relationship_description": "試戴並喜歡狐狸耳朵發箍，認為與自己的造型相配",
+            "relationship_strength": 9
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "兔子耳朵發箍",
+            "relationship_description": "試戴兔子耳朵發箍，覺得可愛但難以選擇",
+            "relationship_strength": 7
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "小狐狸吊飾項煉",
+            "relationship_description": "發現並喜歡小狐狸吊飾項煉，認為與自己的造型超配",
+            "relationship_strength": 8
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "小鈴鐺手煉",
+            "relationship_description": "認為小鈴鐺手煉很可愛，喜歡它發出的聲音",
+            "relationship_strength": 7
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "發帶",
+            "relationship_description": "注意到發帶顏色與自己的領帶很搭，詢問Kiwi意見",
+            "relationship_strength": 6
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "快樂",
+            "relationship_description": "認為快樂才是最重要的，反駁Kiwi的健康觀點",
+            "relationship_strength": 9
+          },
+          {
+            "source_entity": "Kiwi",
+            "target_entity": "健康",
+            "relationship_description": "認為健康比較重要",
+            "relationship_strength": 8
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "服飾店",
+            "relationship_description": "進入服飾店購物，對各種飾品表現出興奮",
+            "relationship_strength": 8
+          },
+          {
+            "source_entity": "Kiwi",
+            "target_entity": "服飾店",
+            "relationship_description": "跟隨MANUKA進入服飾店",
+            "relationship_strength": 5
+          }
+        ]
+      },
+      {
+        "entities": [
+          {
+            "entity_name": "Kiwi",
+            "entity_type": "人物",
+            "entity_description": "對話中的用戶，與MANUKA一起購物，負責提供建議和提醒"
+          },
+          {
+            "entity_name": "MANUKA",
+            "entity_type": "人物",
+            "entity_description": "VTuber，正在購物，對零食和發箍表現出極大興趣，性格活潑"
+          },
+          {
+            "entity_name": "狐狸發箍",
+            "entity_type": "物品",
+            "entity_description": "MANUKA試戴後決定購買的飾品，是她最喜歡的商品"
+          },
+          {
+            "entity_name": "酒紅色",
+            "entity_type": "概念",
+            "entity_description": "MANUKA領帶的顏色，與鮮紅色不同"
+          },
+          {
+            "entity_name": "鮮紅色",
+            "entity_type": "概念",
+            "entity_description": "MANUKA領帶的顏色，與酒紅色形成對比"
+          },
+          {
+            "entity_name": "大型零食店",
+            "entity_type": "地點",
+            "entity_description": "MANUKA和Kiwi進入的商店，銷售各種零食"
+          },
+          {
+            "entity_name": "彩虹巧克力",
+            "entity_type": "物品",
+            "entity_description": "零食店中的新出產品，MANUKA對此感到興奮"
+          },
+          {
+            "entity_name": "草莓口味洋芋片",
+            "entity_type": "物品",
+            "entity_description": "期間限定的零食產品，MANUKA對其包裝感到喜愛"
+          },
+          {
+            "entity_name": "小熊餅乾",
+            "entity_type": "物品",
+            "entity_description": "零食店中的產品，有新口味蜜糖牛奶"
+          },
+          {
+            "entity_name": "蜜糖牛奶口味",
+            "entity_type": "概念",
+            "entity_description": "小熊餅乾的新口味，MANUKA想購買"
+          },
+          {
+            "entity_name": "布丁",
+            "entity_type": "物品",
+            "entity_description": "零食店中的新出產品，MANUKA想購買"
+          },
+          {
+            "entity_name": "狐狸造型洋芋片",
+            "entity_type": "物品",
+            "entity_description": "包裝為狐狸造型的洋芋片，MANUKA認為是為她設計的"
+          },
+          {
+            "entity_name": "軟糖",
+            "entity_type": "物品",
+            "entity_description": "兒童零食區的產品，有可愛的動物造型"
+          },
+          {
+            "entity_name": "巧克力棒",
+            "entity_type": "物品",
+            "entity_description": "零食店中的新出產品，MANUKA想購買"
+          },
+          {
+            "entity_name": "VTuber",
+            "entity_type": "職業",
+            "entity_description": "MANUKA的職業，她以試吃評價零食作為工作理由"
+          },
+          {
+            "entity_name": "試衣間",
+            "entity_type": "地點",
+            "entity_description": "MANUKA試戴發箍的地方"
+          },
+          {
+            "entity_name": "兒童零食區",
+            "entity_type": "地點",
+            "entity_description": "零食店中專門銷售兒童零食的區域"
+          }
+        ],
+        "relationships": [
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "Kiwi",
+            "relationship_description": "請求Kiwi幫忙拿飲料並等待她試戴發箍",
+            "relationship_strength": 7
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "狐狸發箍",
+            "relationship_description": "試戴後最喜歡並決定購買",
+            "relationship_strength": 9
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "大型零食店",
+            "relationship_description": "進入並興奮地瀏覽各種零食",
+            "relationship_strength": 8
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "彩虹巧克力",
+            "relationship_description": "對新出的彩虹巧克力感到興奮",
+            "relationship_strength": 7
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "草莓口味洋芋片",
+            "relationship_description": "對期間限定的草莓口味洋芋片感興趣",
+            "relationship_strength": 7
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "小熊餅乾",
+            "relationship_description": "想購買新口味蜜糖牛奶的小熊餅乾",
+            "relationship_strength": 8
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "布丁",
+            "relationship_description": "對新出的布丁感興趣並想購買",
+            "relationship_strength": 6
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "狐狸造型洋芋片",
+            "relationship_description": "認為狐狸造型的洋芋片是為她設計的，一定要買",
+            "relationship_strength": 9
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "軟糖",
+            "relationship_description": "對兒童零食區的動物造型軟糖感興趣",
+            "relationship_strength": 6
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "巧克力棒",
+            "relationship_description": "對新出的巧克力棒感興趣",
+            "relationship_strength": 6
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "VTuber",
+            "relationship_description": "以VTuber身份為理由，聲稱需要試吃評價零食",
+            "relationship_strength": 8
+          },
+          {
+            "source_entity": "Kiwi",
+            "target_entity": "MANUKA",
+            "relationship_description": "提醒MANUKA冷靜並質疑她購買零食的借口",
+            "relationship_strength": 6
+          }
+        ]
+      },
+      {
+        "entities": [
+          {
+            "entity_name": "Kiwi",
+            "entity_type": "人物",
+            "entity_description": "對話中的一位角色，與MANUKA一起購物，負責提購物籃，性格較為無奈但包容。"
+          },
+          {
+            "entity_name": "MANUKA",
+            "entity_type": "人物",
+            "entity_description": "對話中的另一位角色，熱愛購物和零食，性格活潑、調皮，喜歡惡作劇，經常撒嬌或耍賴。"
+          },
+          {
+            "entity_name": "抹茶蛋糕卷",
+            "entity_type": "物品",
+            "entity_description": "期間限定的甜點，MANUKA想購買的商品之一，被描述為超級好吃。"
+          },
+          {
+            "entity_name": "購物籃",
+            "entity_type": "物品",
+            "entity_description": "Kiwi和MANUKA購物時使用的籃子，裝滿了零食和其他商品。"
+          },
+          {
+            "entity_name": "公園",
+            "entity_type": "地點",
+            "entity_description": "Kiwi和MANUKA購物後休息的地點，他們在長椅上坐下吃零食。"
+          },
+          {
+            "entity_name": "小熊餅乾",
+            "entity_type": "物品",
+            "entity_description": "蜜糖牛奶口味的餅乾，MANUKA在公園休息時想吃的零食之一。"
+          },
+          {
+            "entity_name": "狐狸造型的洋芋片",
+            "entity_type": "物品",
+            "entity_description": "新出的零食，造型獨特，MANUKA想拍照上傳。"
+          },
+          {
+            "entity_name": "零食",
+            "entity_type": "物品",
+            "entity_description": "Kiwi和MANUKA購買的各種食品，包括餅乾、洋芋片等，預計可供食用一週。"
+          }
+        ],
+        "relationships": [
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "Kiwi",
+            "relationship_description": "MANUKA向Kiwi撒嬌、耍賴，並討好Kiwi以購買更多零食，顯示依賴和親密關係。",
+            "relationship_strength": 8
+          },
+          {
+            "source_entity": "Kiwi",
+            "target_entity": "MANUKA",
+            "relationship_description": "Kiwi包容MANUKA的任性，幫忙提購物籃，並無奈地配合MANUKA的惡作劇，顯示照顧和容忍的關係。",
+            "relationship_strength": 7
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "抹茶蛋糕卷",
+            "relationship_description": "MANUKA極力想購買抹茶蛋糕卷，因為它看起來超級好吃且期間限定。",
+            "relationship_strength": 9
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "零食",
+            "relationship_description": "MANUKA熱愛零食，購買了大量零食，並計劃在公園享用。",
+            "relationship_strength": 10
+          },
+          {
+            "source_entity": "Kiwi",
+            "target_entity": "購物籃",
+            "relationship_description": "Kiwi負責提著裝滿零食的購物籃，顯示其承擔重物的角色。",
+            "relationship_strength": 8
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "公園",
+            "relationship_description": "MANUKA提議去公園休息，並在公園的長椅上吃零食。",
+            "relationship_strength": 7
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "小熊餅乾",
+            "relationship_description": "MANUKA在公園休息時急著想吃蜜糖牛奶口味的小熊餅乾。",
+            "relationship_strength": 9
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "狐狸造型的洋芋片",
+            "relationship_description": "MANUKA對狐狸造型的洋芋片感到好奇，並想拍照上傳。",
+            "relationship_strength": 8
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "Kiwi",
+            "relationship_description": "MANUKA對Kiwi惡作劇，假裝要餵餅乾卻自己吃掉，顯示調皮和玩笑的關係。",
+            "relationship_strength": 6
+          }
+        ]
+      },
+      {
+        "entities": [
+          {
+            "entity_name": "Kiwi",
+            "entity_type": "人物",
+            "entity_description": "對話中的一位參與者，與MANUKA一起出游，性格較為冷靜務實，會提醒MANUKA該回家，並拒絕背她但願意幫忙拿零食。"
+          },
+          {
+            "entity_name": "MANUKA",
+            "entity_type": "人物",
+            "entity_description": "對話中的另一位參與者，性格活潑、愛拍照、貪吃零食、喜歡探索新地方，偶爾會撒嬌耍賴。"
+          },
+          {
+            "entity_name": "零食",
+            "entity_type": "物品",
+            "entity_description": "MANUKA購買並食用的食物，也是她拍照的對像，在對話中是休閑活動的一部分。"
+          },
+          {
+            "entity_name": "鴿子",
+            "entity_type": "動物",
+            "entity_description": "在公園或戶外場景中出現的一只胖鴿子，被MANUKA形容為呆呆的、溫溫吞吞的，後來飛走了。"
+          },
+          {
+            "entity_name": "拍照",
+            "entity_type": "活動",
+            "entity_description": "MANUKA在吃零食時順便進行的活動，她認為將零食拍得很可愛是一舉兩得。"
+          },
+          {
+            "entity_name": "飲料",
+            "entity_type": "物品",
+            "entity_description": "MANUKA正在喝的飲品，後來快喝完了，她拒絕了Kiwi無糖的飲料。"
+          },
+          {
+            "entity_name": "無糖飲料",
+            "entity_type": "物品",
+            "entity_description": "Kiwi擁有的飲料，被MANUKA形容為懲罰游戲、很難喝，但最終她還是勉強喝了一口。"
+          },
+          {
+            "entity_name": "餅乾",
+            "entity_type": "物品",
+            "entity_description": "MANUKA想吃的最後一包零食，她聲稱需要用它來補充能量。"
+          },
+          {
+            "entity_name": "新的零食店",
+            "entity_type": "地點",
+            "entity_description": "MANUKA希望未來探索的地點，她認為探索新的零食店是很重要的事情。"
+          },
+          {
+            "entity_name": "家",
+            "entity_type": "地點",
+            "entity_description": "Kiwi提醒MANUKA在夕陽西下時該返回的目的地。"
+          }
+        ],
+        "relationships": [
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "零食",
+            "relationship_description": "購買並食用",
+            "relationship_strength": 8
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "拍照",
+            "relationship_description": "進行活動",
+            "relationship_strength": 7
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "鴿子",
+            "relationship_description": "看見並調侃",
+            "relationship_strength": 6
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "Kiwi",
+            "relationship_description": "一起出游互動",
+            "relationship_strength": 9
+          },
+          {
+            "source_entity": "Kiwi",
+            "target_entity": "MANUKA",
+            "relationship_description": "一起出游並照顧",
+            "relationship_strength": 8
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "新的零食店",
+            "relationship_description": "希望探索",
+            "relationship_strength": 7
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "飲料",
+            "relationship_description": "飲用",
+            "relationship_strength": 6
+          },
+          {
+            "source_entity": "Kiwi",
+            "target_entity": "無糖飲料",
+            "relationship_description": "擁有並提供",
+            "relationship_strength": 5
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "無糖飲料",
+            "relationship_description": "拒絕但最終嘗試",
+            "relationship_strength": 4
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "餅乾",
+            "relationship_description": "想吃最後一包",
+            "relationship_strength": 6
+          },
+          {
+            "source_entity": "Kiwi",
+            "target_entity": "家",
+            "relationship_description": "提醒返回",
+            "relationship_strength": 7
+          }
+        ]
+      },
+      {
+        "entities": [
+          {
+            "entity_name": "Kiwi",
+            "entity_type": "人物",
+            "entity_description": "對話中的一位角色，與MANUKA互動，負責購物、照顧MANUKA並配合其需求。"
+          },
+          {
+            "entity_name": "MANUKA",
+            "entity_type": "人物",
+            "entity_description": "對話中的另一位角色，性格活潑、慵懶且愛撒嬌，喜歡零食和探險，與Kiwi關係親密。"
+          },
+          {
+            "entity_name": "餅乾",
+            "entity_type": "物品",
+            "entity_description": "Kiwi從購物袋中拿出的零食，新口味，被MANUKA稱讚好吃。"
+          },
+          {
+            "entity_name": "狐狸發箍",
+            "entity_type": "物品",
+            "entity_description": "MANUKA佩戴的髮飾，由Kiwi幫忙調整戴好。"
+          },
+          {
+            "entity_name": "夕陽",
+            "entity_type": "自然現像",
+            "entity_description": "傍晚的太陽景色，被MANUKA形容為漂亮，建議慢慢走欣賞。"
+          },
+          {
+            "entity_name": "新開的甜品店",
+            "entity_type": "地點",
+            "entity_description": "MANUKA提議下次探險的地點，是一間新開的甜品店。"
+          },
+          {
+            "entity_name": "家",
+            "entity_type": "地點",
+            "entity_description": "Kiwi和MANUKA返回的住所，Kiwi用鑰匙開門進入。"
+          },
+          {
+            "entity_name": "直播開箱",
+            "entity_type": "事件",
+            "entity_description": "MANUKA計劃明天進行的活動，內容是開箱今天購買的零食，並邀請Kiwi當助手。"
+          },
+          {
+            "entity_name": "沙發",
+            "entity_type": "物品",
+            "entity_description": "家中的家具，MANUKA疲憊時想去躺平休息的地方。"
+          },
+          {
+            "entity_name": "零食",
+            "entity_type": "物品",
+            "entity_description": "今天購買的食品，MANUKA打算很快吃完，並計劃明天直播開箱。"
+          }
+        ],
+        "relationships": [
+          {
+            "source_entity": "Kiwi",
+            "target_entity": "MANUKA",
+            "relationship_description": "照顧與陪伴，Kiwi遞餅乾給MANUKA、調整發箍、放慢腳步配合、拿鑰匙開門，並答應協助直播。",
+            "relationship_strength": 9
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "Kiwi",
+            "relationship_description": "依賴與撒嬌，MANUKA向Kiwi索要餅乾、請求調整發箍、要求走慢一點、提議探險並邀請當直播助手。",
+            "relationship_strength": 8
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "餅乾",
+            "relationship_description": "喜愛與享用，MANUKA稱讚餅乾好吃，並表示餅乾給了力量。",
+            "relationship_strength": 7
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "狐狸發箍",
+            "relationship_description": "佩戴與依賴，MANUKA佩戴發箍，並認為戴好後走路比較不會累。",
+            "relationship_strength": 6
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "夕陽",
+            "relationship_description": "欣賞，MANUKA認為夕陽漂亮，建議慢慢走以免浪費景色。",
+            "relationship_strength": 5
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "新開的甜品店",
+            "relationship_description": "提議探險，MANUKA想下次去這間新開的甜品店探險。",
+            "relationship_strength": 6
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "直播開箱",
+            "relationship_description": "計劃進行，MANUKA計劃明天直播開箱今天買的零食，並邀請Kiwi當助手。",
+            "relationship_strength": 8
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "沙發",
+            "relationship_description": "休息，MANUKA疲憊時想去沙發上躺平休息。",
+            "relationship_strength": 7
+          },
+          {
+            "source_entity": "MANUKA",
+            "target_entity": "零食",
+            "relationship_description": "購買與計劃消耗，MANUKA今天買了零食，打算很快吃完並直播開箱。",
+            "relationship_strength": 8
+          },
+          {
+            "source_entity": "Kiwi",
+            "target_entity": "零食",
+            "relationship_description": "購買與管理，Kiwi購買了零食，並提醒MANUKA先吃完再說。",
+            "relationship_strength": 6
+          }
+        ]
+      }
+    ]
   }
 }

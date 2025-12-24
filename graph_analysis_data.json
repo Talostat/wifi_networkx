@@ -1,0 +1,997 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "group": "人物",
+      "title": "<b>Kiwi</b><br>類型: 人物<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 對話中的一位參與者，與MANUKA一同出門，性格溫和，常被MANUKA調侃<br>• 對話中的一位角色，被MANUKA拉著去飲料店，負責點餐和拿飲料，性格較為無奈但順從<br>• 對話中的一方，對健康比較重視，審美觀被MANUKA吐槽，性格較為內斂<br>• 對話中的用戶，與MANUKA一起購物，負責提供建議和提醒<br>• 對話中的一位角色，與MANUKA一起購物，負責提購物籃，性格較為無奈但包容。<br>• 對話中的一位參與者，與MANUKA一起出游，性格較為冷靜務實，會提醒MANUKA該回家，並拒絕背她但願意幫忙拿零食。<br>• 對話中的一位角色，與MANUKA互動，負責購物、照顧MANUKA並配合其需求。</div><br>Community: 6",
+      "description": "對話中的一位參與者，與MANUKA一同出門，性格溫和，常被MANUKA調侃\n• 對話中的一位角色，被MANUKA拉著去飲料店，負責點餐和拿飲料，性格較為無奈但順從\n• 對話中的一方，對健康比較重視，審美觀被MANUKA吐槽，性格較為內斂\n• 對話中的用戶，與MANUKA一起購物，負責提供建議和提醒\n• 對話中的一位角色，與MANUKA一起購物，負責提購物籃，性格較為無奈但包容。\n• 對話中的一位參與者，與MANUKA一起出游，性格較為冷靜務實，會提醒MANUKA該回家，並拒絕背她但願意幫忙拿零食。\n• 對話中的一位角色，與MANUKA互動，負責購物、照顧MANUKA並配合其需求。",
+      "degree": 9,
+      "community": 6,
+      "community_color": "#9B59B6",
+      "id": "Kiwi"
+    },
+    {
+      "group": "人物",
+      "title": "<b>MANUKA</b><br>類型: 人物<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 對話中的主要發言者，性格活潑、自信、俏皮，自稱狐狸，喜歡規劃行程<br>• 對話中的主要角色，暱稱MANUKA大人，個性活潑、任性、喜歡甜食和可愛的東西，熱衷於拍照上傳社群<br>• 對話中的另一方，認為快樂最重要，喜歡可愛飾品，對狐狸造型有特別偏好，性格活潑外向<br>• VTuber，正在購物，對零食和發箍表現出極大興趣，性格活潑<br>• 對話中的另一位角色，熱愛購物和零食，性格活潑、調皮，喜歡惡作劇，經常撒嬌或耍賴。<br>• 對話中的另一位參與者，性格活潑、愛拍照、貪吃零食、喜歡探索新地方，偶爾會撒嬌耍賴。<br>• 對話中的另一位角色，性格活潑、慵懶且愛撒嬌，喜歡零食和探險，與Kiwi關係親密。</div><br>Community: 0",
+      "description": "對話中的主要發言者，性格活潑、自信、俏皮，自稱狐狸，喜歡規劃行程\n• 對話中的主要角色，暱稱MANUKA大人，個性活潑、任性、喜歡甜食和可愛的東西，熱衷於拍照上傳社群\n• 對話中的另一方，認為快樂最重要，喜歡可愛飾品，對狐狸造型有特別偏好，性格活潑外向\n• VTuber，正在購物，對零食和發箍表現出極大興趣，性格活潑\n• 對話中的另一位角色，熱愛購物和零食，性格活潑、調皮，喜歡惡作劇，經常撒嬌或耍賴。\n• 對話中的另一位參與者，性格活潑、愛拍照、貪吃零食、喜歡探索新地方，偶爾會撒嬌耍賴。\n• 對話中的另一位角色，性格活潑、慵懶且愛撒嬌，喜歡零食和探險，與Kiwi關係親密。",
+      "degree": 47,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "MANUKA"
+    },
+    {
+      "group": "地點",
+      "title": "<b>車站前新開的飲料店</b><br>類型: 地點<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: MANUKA規劃的行程中的第一站，位於車站前，是一家新開的飲料店</div><br>Community: 0",
+      "description": "MANUKA規劃的行程中的第一站，位於車站前，是一家新開的飲料店",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "車站前新開的飲料店"
+    },
+    {
+      "group": "地點",
+      "title": "<b>很大的服飾店</b><br>類型: 地點<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: MANUKA規劃的行程中的第二站，是一間規模很大的服飾店</div><br>Community: 0",
+      "description": "MANUKA規劃的行程中的第二站，是一間規模很大的服飾店",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "很大的服飾店"
+    },
+    {
+      "group": "地點",
+      "title": "<b>零食店</b><br>類型: 地點<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: MANUKA規劃的行程中的第三站，計劃前往掃貨購買零食</div><br>Community: 0",
+      "description": "MANUKA規劃的行程中的第三站，計劃前往掃貨購買零食",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "零食店"
+    },
+    {
+      "group": "地點",
+      "title": "<b>公園</b><br>類型: 地點<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: MANUKA規劃的行程中的最後一站，計劃去那裡坐坐<br>• Kiwi和MANUKA購物後休息的地點，他們在長椅上坐下吃零食。</div><br>Community: 0",
+      "description": "MANUKA規劃的行程中的最後一站，計劃去那裡坐坐\n• Kiwi和MANUKA購物後休息的地點，他們在長椅上坐下吃零食。",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "公園"
+    },
+    {
+      "group": "動物",
+      "title": "<b>貓</b><br>類型: 動物<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 在路上看到的一隻貓，毛茸茸的可愛，尾巴被MANUKA拿來與自己的狐狸耳朵比較</div><br>Community: 0",
+      "description": "在路上看到的一隻貓，毛茸茸的可愛，尾巴被MANUKA拿來與自己的狐狸耳朵比較",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "貓"
+    },
+    {
+      "group": "身體特徵",
+      "title": "<b>狐狸耳朵</b><br>類型: 身體特徵<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: MANUKA自稱擁有的耳朵特徵，認為比貓的尾巴更可愛</div><br>Community: 0",
+      "description": "MANUKA自稱擁有的耳朵特徵，認為比貓的尾巴更可愛",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "狐狸耳朵"
+    },
+    {
+      "group": "活動",
+      "title": "<b>直播</b><br>類型: 活動<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: MANUKA從事的線上直播活動，有觀眾參與</div><br>Community: 0",
+      "description": "MANUKA從事的線上直播活動，有觀眾參與",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "直播"
+    },
+    {
+      "group": "人物",
+      "title": "<b>觀眾</b><br>類型: 人物<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 觀看MANUKA直播的人，曾送她一個大貼圖</div><br>Community: 1",
+      "description": "觀看MANUKA直播的人，曾送她一個大貼圖",
+      "degree": 2,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "觀眾"
+    },
+    {
+      "group": "物品",
+      "title": "<b>貼圖</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 觀眾送給MANUKA的禮物，上面說她吃東西的樣子像倉鼠</div><br>Community: 1",
+      "description": "觀眾送給MANUKA的禮物，上面說她吃東西的樣子像倉鼠",
+      "degree": 2,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "貼圖"
+    },
+    {
+      "group": "動物",
+      "title": "<b>倉鼠</b><br>類型: 動物<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 一種小型囓齒動物，被觀眾用來比喻MANUKA吃東西的樣子</div><br>Community: 1",
+      "description": "一種小型囓齒動物，被觀眾用來比喻MANUKA吃東西的樣子",
+      "degree": 2,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "倉鼠"
+    },
+    {
+      "group": "地點",
+      "title": "<b>飲料店</b><br>類型: 地點<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: Kiwi和MANUKA前往購買飲料的地點，提供多種新品飲料，裝潢漂亮，並提供愛心造型杯蓋和星星造型吸管</div><br>Community: 6",
+      "description": "Kiwi和MANUKA前往購買飲料的地點，提供多種新品飲料，裝潢漂亮，並提供愛心造型杯蓋和星星造型吸管",
+      "degree": 2,
+      "community": 6,
+      "community_color": "#9B59B6",
+      "id": "飲料店"
+    },
+    {
+      "group": "物品",
+      "title": "<b>芒果百香雙響炮</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 飲料店菜單上的新品飲料之一</div><br>Community: 2",
+      "description": "飲料店菜單上的新品飲料之一",
+      "degree": 0,
+      "community": 2,
+      "community_color": "#45B7D1",
+      "id": "芒果百香雙響炮"
+    },
+    {
+      "group": "物品",
+      "title": "<b>草莓雲朵奶蓋</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 飲料店菜單上的新品飲料之一</div><br>Community: 3",
+      "description": "飲料店菜單上的新品飲料之一",
+      "degree": 0,
+      "community": 3,
+      "community_color": "#96CEB4",
+      "id": "草莓雲朵奶蓋"
+    },
+    {
+      "group": "物品",
+      "title": "<b>薄荷巧克力脆脆冰</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 飲料店菜單上的新品飲料之一</div><br>Community: 4",
+      "description": "飲料店菜單上的新品飲料之一",
+      "degree": 0,
+      "community": 4,
+      "community_color": "#FFEEAD",
+      "id": "薄荷巧克力脆脆冰"
+    },
+    {
+      "group": "物品",
+      "title": "<b>草莓奶蓋</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: MANUKA最終選擇的飲料，要求全糖、正常冰塊，並加珍珠</div><br>Community: 0",
+      "description": "MANUKA最終選擇的飲料，要求全糖、正常冰塊，並加珍珠",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "草莓奶蓋"
+    },
+    {
+      "group": "物品",
+      "title": "<b>愛心造型杯蓋</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 飲料店提供的特殊杯蓋，MANUKA特別要求使用</div><br>Community: 0",
+      "description": "飲料店提供的特殊杯蓋，MANUKA特別要求使用",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "愛心造型杯蓋"
+    },
+    {
+      "group": "物品",
+      "title": "<b>星星造型吸管</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 飲料店提供的吸管造型，MANUKA對此感到驚喜</div><br>Community: 0",
+      "description": "飲料店提供的吸管造型，MANUKA對此感到驚喜",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "星星造型吸管"
+    },
+    {
+      "group": "物品",
+      "title": "<b>珍珠</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: MANUKA要求加入草莓奶蓋中的配料</div><br>Community: 0",
+      "description": "MANUKA要求加入草莓奶蓋中的配料",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "珍珠"
+    },
+    {
+      "group": "概念",
+      "title": "<b>社群</b><br>類型: 概念<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: MANUKA打算拍照上傳的社交媒體平台</div><br>Community: 0",
+      "description": "MANUKA打算拍照上傳的社交媒體平台",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "社群"
+    },
+    {
+      "group": "物品",
+      "title": "<b>狐狸耳朵發箍</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 服飾店中的裝飾品，MANUKA試戴的飾品之一，與MANUKA原有的狐狸耳朵造型相配</div><br>Community: 0",
+      "description": "服飾店中的裝飾品，MANUKA試戴的飾品之一，與MANUKA原有的狐狸耳朵造型相配",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "狐狸耳朵發箍"
+    },
+    {
+      "group": "物品",
+      "title": "<b>兔子耳朵發箍</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 服飾店中的裝飾品，MANUKA試戴的另一個飾品，與狐狸耳朵發箍風格不同</div><br>Community: 0",
+      "description": "服飾店中的裝飾品，MANUKA試戴的另一個飾品，與狐狸耳朵發箍風格不同",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "兔子耳朵發箍"
+    },
+    {
+      "group": "物品",
+      "title": "<b>貓耳發箍</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 服飾店中的另一個飾品，MANUKA在發現狐狸和兔子發箍後注意到的第三個選擇</div><br>Community: 5",
+      "description": "服飾店中的另一個飾品，MANUKA在發現狐狸和兔子發箍後注意到的第三個選擇",
+      "degree": 0,
+      "community": 5,
+      "community_color": "#D4A5A5",
+      "id": "貓耳發箍"
+    },
+    {
+      "group": "物品",
+      "title": "<b>小狐狸吊飾項煉</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 會發光的項煉，上面有小狐狸吊飾，MANUKA認為與自己的造型很配</div><br>Community: 0",
+      "description": "會發光的項煉，上面有小狐狸吊飾，MANUKA認為與自己的造型很配",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "小狐狸吊飾項煉"
+    },
+    {
+      "group": "物品",
+      "title": "<b>小鈴鐺手煉</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 帶有小鈴鐺的手煉，MANUKA認為很可愛，走路時會發出叮當聲</div><br>Community: 0",
+      "description": "帶有小鈴鐺的手煉，MANUKA認為很可愛，走路時會發出叮當聲",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "小鈴鐺手煉"
+    },
+    {
+      "group": "物品",
+      "title": "<b>發帶</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 與MANUKA領帶顏色相配的發帶，MANUKA詢問Kiwi意見的另一個飾品</div><br>Community: 0",
+      "description": "與MANUKA領帶顏色相配的發帶，MANUKA詢問Kiwi意見的另一個飾品",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "發帶"
+    },
+    {
+      "group": "地點",
+      "title": "<b>服飾店</b><br>類型: 地點<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 裝潢可愛的商店，Kiwi和MANUKA進入購物的地方</div><br>Community: 6",
+      "description": "裝潢可愛的商店，Kiwi和MANUKA進入購物的地方",
+      "degree": 2,
+      "community": 6,
+      "community_color": "#9B59B6",
+      "id": "服飾店"
+    },
+    {
+      "group": "概念",
+      "title": "<b>健康</b><br>類型: 概念<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: Kiwi認為比較重要的價值觀</div><br>Community: 6",
+      "description": "Kiwi認為比較重要的價值觀",
+      "degree": 1,
+      "community": 6,
+      "community_color": "#9B59B6",
+      "id": "健康"
+    },
+    {
+      "group": "概念",
+      "title": "<b>快樂</b><br>類型: 概念<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: MANUKA認為最重要的價值觀</div><br>Community: 0",
+      "description": "MANUKA認為最重要的價值觀",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "快樂"
+    },
+    {
+      "group": "物品",
+      "title": "<b>狐狸發箍</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: MANUKA試戴後決定購買的飾品，是她最喜歡的商品<br>• MANUKA佩戴的髮飾，由Kiwi幫忙調整戴好。</div><br>Community: 0",
+      "description": "MANUKA試戴後決定購買的飾品，是她最喜歡的商品\n• MANUKA佩戴的髮飾，由Kiwi幫忙調整戴好。",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "狐狸發箍"
+    },
+    {
+      "group": "概念",
+      "title": "<b>酒紅色</b><br>類型: 概念<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: MANUKA領帶的顏色，與鮮紅色不同</div><br>Community: 7",
+      "description": "MANUKA領帶的顏色，與鮮紅色不同",
+      "degree": 0,
+      "community": 7,
+      "community_color": "#3498DB",
+      "id": "酒紅色"
+    },
+    {
+      "group": "概念",
+      "title": "<b>鮮紅色</b><br>類型: 概念<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: MANUKA領帶的顏色，與酒紅色形成對比</div><br>Community: 8",
+      "description": "MANUKA領帶的顏色，與酒紅色形成對比",
+      "degree": 0,
+      "community": 8,
+      "community_color": "#E67E22",
+      "id": "鮮紅色"
+    },
+    {
+      "group": "地點",
+      "title": "<b>大型零食店</b><br>類型: 地點<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: MANUKA和Kiwi進入的商店，銷售各種零食</div><br>Community: 0",
+      "description": "MANUKA和Kiwi進入的商店，銷售各種零食",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "大型零食店"
+    },
+    {
+      "group": "物品",
+      "title": "<b>彩虹巧克力</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 零食店中的新出產品，MANUKA對此感到興奮</div><br>Community: 0",
+      "description": "零食店中的新出產品，MANUKA對此感到興奮",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "彩虹巧克力"
+    },
+    {
+      "group": "物品",
+      "title": "<b>草莓口味洋芋片</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 期間限定的零食產品，MANUKA對其包裝感到喜愛</div><br>Community: 0",
+      "description": "期間限定的零食產品，MANUKA對其包裝感到喜愛",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "草莓口味洋芋片"
+    },
+    {
+      "group": "物品",
+      "title": "<b>小熊餅乾</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 零食店中的產品，有新口味蜜糖牛奶<br>• 蜜糖牛奶口味的餅乾，MANUKA在公園休息時想吃的零食之一。</div><br>Community: 0",
+      "description": "零食店中的產品，有新口味蜜糖牛奶\n• 蜜糖牛奶口味的餅乾，MANUKA在公園休息時想吃的零食之一。",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "小熊餅乾"
+    },
+    {
+      "group": "概念",
+      "title": "<b>蜜糖牛奶口味</b><br>類型: 概念<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 小熊餅乾的新口味，MANUKA想購買</div><br>Community: 9",
+      "description": "小熊餅乾的新口味，MANUKA想購買",
+      "degree": 0,
+      "community": 9,
+      "community_color": "#2ECC71",
+      "id": "蜜糖牛奶口味"
+    },
+    {
+      "group": "物品",
+      "title": "<b>布丁</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 零食店中的新出產品，MANUKA想購買</div><br>Community: 0",
+      "description": "零食店中的新出產品，MANUKA想購買",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "布丁"
+    },
+    {
+      "group": "物品",
+      "title": "<b>狐狸造型洋芋片</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 包裝為狐狸造型的洋芋片，MANUKA認為是為她設計的</div><br>Community: 0",
+      "description": "包裝為狐狸造型的洋芋片，MANUKA認為是為她設計的",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "狐狸造型洋芋片"
+    },
+    {
+      "group": "物品",
+      "title": "<b>軟糖</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 兒童零食區的產品，有可愛的動物造型</div><br>Community: 0",
+      "description": "兒童零食區的產品，有可愛的動物造型",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "軟糖"
+    },
+    {
+      "group": "物品",
+      "title": "<b>巧克力棒</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 零食店中的新出產品，MANUKA想購買</div><br>Community: 0",
+      "description": "零食店中的新出產品，MANUKA想購買",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "巧克力棒"
+    },
+    {
+      "group": "職業",
+      "title": "<b>VTuber</b><br>類型: 職業<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: MANUKA的職業，她以試吃評價零食作為工作理由</div><br>Community: 0",
+      "description": "MANUKA的職業，她以試吃評價零食作為工作理由",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "VTuber"
+    },
+    {
+      "group": "地點",
+      "title": "<b>試衣間</b><br>類型: 地點<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: MANUKA試戴發箍的地方</div><br>Community: 10",
+      "description": "MANUKA試戴發箍的地方",
+      "degree": 0,
+      "community": 10,
+      "community_color": "#F1C40F",
+      "id": "試衣間"
+    },
+    {
+      "group": "地點",
+      "title": "<b>兒童零食區</b><br>類型: 地點<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 零食店中專門銷售兒童零食的區域</div><br>Community: 11",
+      "description": "零食店中專門銷售兒童零食的區域",
+      "degree": 0,
+      "community": 11,
+      "community_color": "#E74C3C",
+      "id": "兒童零食區"
+    },
+    {
+      "group": "物品",
+      "title": "<b>抹茶蛋糕卷</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 期間限定的甜點，MANUKA想購買的商品之一，被描述為超級好吃。</div><br>Community: 0",
+      "description": "期間限定的甜點，MANUKA想購買的商品之一，被描述為超級好吃。",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "抹茶蛋糕卷"
+    },
+    {
+      "group": "物品",
+      "title": "<b>購物籃</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: Kiwi和MANUKA購物時使用的籃子，裝滿了零食和其他商品。</div><br>Community: 6",
+      "description": "Kiwi和MANUKA購物時使用的籃子，裝滿了零食和其他商品。",
+      "degree": 1,
+      "community": 6,
+      "community_color": "#9B59B6",
+      "id": "購物籃"
+    },
+    {
+      "group": "物品",
+      "title": "<b>狐狸造型的洋芋片</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 新出的零食，造型獨特，MANUKA想拍照上傳。</div><br>Community: 0",
+      "description": "新出的零食，造型獨特，MANUKA想拍照上傳。",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "狐狸造型的洋芋片"
+    },
+    {
+      "group": "物品",
+      "title": "<b>零食</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: Kiwi和MANUKA購買的各種食品，包括餅乾、洋芋片等，預計可供食用一週。<br>• MANUKA購買並食用的食物，也是她拍照的對像，在對話中是休閑活動的一部分。<br>• 今天購買的食品，MANUKA打算很快吃完，並計劃明天直播開箱。</div><br>Community: 0",
+      "description": "Kiwi和MANUKA購買的各種食品，包括餅乾、洋芋片等，預計可供食用一週。\n• MANUKA購買並食用的食物，也是她拍照的對像，在對話中是休閑活動的一部分。\n• 今天購買的食品，MANUKA打算很快吃完，並計劃明天直播開箱。",
+      "degree": 2,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "零食"
+    },
+    {
+      "group": "動物",
+      "title": "<b>鴿子</b><br>類型: 動物<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 在公園或戶外場景中出現的一只胖鴿子，被MANUKA形容為呆呆的、溫溫吞吞的，後來飛走了。</div><br>Community: 0",
+      "description": "在公園或戶外場景中出現的一只胖鴿子，被MANUKA形容為呆呆的、溫溫吞吞的，後來飛走了。",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "鴿子"
+    },
+    {
+      "group": "活動",
+      "title": "<b>拍照</b><br>類型: 活動<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: MANUKA在吃零食時順便進行的活動，她認為將零食拍得很可愛是一舉兩得。</div><br>Community: 0",
+      "description": "MANUKA在吃零食時順便進行的活動，她認為將零食拍得很可愛是一舉兩得。",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "拍照"
+    },
+    {
+      "group": "物品",
+      "title": "<b>飲料</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: MANUKA正在喝的飲品，後來快喝完了，她拒絕了Kiwi無糖的飲料。</div><br>Community: 0",
+      "description": "MANUKA正在喝的飲品，後來快喝完了，她拒絕了Kiwi無糖的飲料。",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "飲料"
+    },
+    {
+      "group": "物品",
+      "title": "<b>無糖飲料</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: Kiwi擁有的飲料，被MANUKA形容為懲罰游戲、很難喝，但最終她還是勉強喝了一口。</div><br>Community: 6",
+      "description": "Kiwi擁有的飲料，被MANUKA形容為懲罰游戲、很難喝，但最終她還是勉強喝了一口。",
+      "degree": 2,
+      "community": 6,
+      "community_color": "#9B59B6",
+      "id": "無糖飲料"
+    },
+    {
+      "group": "物品",
+      "title": "<b>餅乾</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: MANUKA想吃的最後一包零食，她聲稱需要用它來補充能量。<br>• Kiwi從購物袋中拿出的零食，新口味，被MANUKA稱讚好吃。</div><br>Community: 0",
+      "description": "MANUKA想吃的最後一包零食，她聲稱需要用它來補充能量。\n• Kiwi從購物袋中拿出的零食，新口味，被MANUKA稱讚好吃。",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "餅乾"
+    },
+    {
+      "group": "地點",
+      "title": "<b>新的零食店</b><br>類型: 地點<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: MANUKA希望未來探索的地點，她認為探索新的零食店是很重要的事情。</div><br>Community: 0",
+      "description": "MANUKA希望未來探索的地點，她認為探索新的零食店是很重要的事情。",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "新的零食店"
+    },
+    {
+      "group": "地點",
+      "title": "<b>家</b><br>類型: 地點<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: Kiwi提醒MANUKA在夕陽西下時該返回的目的地。<br>• Kiwi和MANUKA返回的住所，Kiwi用鑰匙開門進入。</div><br>Community: 6",
+      "description": "Kiwi提醒MANUKA在夕陽西下時該返回的目的地。\n• Kiwi和MANUKA返回的住所，Kiwi用鑰匙開門進入。",
+      "degree": 1,
+      "community": 6,
+      "community_color": "#9B59B6",
+      "id": "家"
+    },
+    {
+      "group": "自然現像",
+      "title": "<b>夕陽</b><br>類型: 自然現像<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 傍晚的太陽景色，被MANUKA形容為漂亮，建議慢慢走欣賞。</div><br>Community: 0",
+      "description": "傍晚的太陽景色，被MANUKA形容為漂亮，建議慢慢走欣賞。",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "夕陽"
+    },
+    {
+      "group": "地點",
+      "title": "<b>新開的甜品店</b><br>類型: 地點<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: MANUKA提議下次探險的地點，是一間新開的甜品店。</div><br>Community: 0",
+      "description": "MANUKA提議下次探險的地點，是一間新開的甜品店。",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "新開的甜品店"
+    },
+    {
+      "group": "事件",
+      "title": "<b>直播開箱</b><br>類型: 事件<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: MANUKA計劃明天進行的活動，內容是開箱今天購買的零食，並邀請Kiwi當助手。</div><br>Community: 0",
+      "description": "MANUKA計劃明天進行的活動，內容是開箱今天購買的零食，並邀請Kiwi當助手。",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "直播開箱"
+    },
+    {
+      "group": "物品",
+      "title": "<b>沙發</b><br>類型: 物品<br><div style=\"max-width: 300px; white-space: pre-wrap; margin-top: 5px;\">描述: 家中的家具，MANUKA疲憊時想去躺平休息的地方。</div><br>Community: 0",
+      "description": "家中的家具，MANUKA疲憊時想去躺平休息的地方。",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "沙發"
+    }
+  ],
+  "links": [
+    {
+      "title": "總強度: 51\n描述:\n順從MANUKA的規劃，牽手過馬路，並同意請客\n• 拿著兩杯飲料走回來交給MANUKA\n• 陪伴MANUKA逛街，對MANUKA的飾品選擇提供有限反饋\n• 提醒MANUKA冷靜並質疑她購買零食的借口\n• Kiwi包容MANUKA的任性，幫忙提購物籃，並無奈地配合MANUKA的惡作劇，顯示照顧和容忍的關係。\n• 一起出游並照顧\n• 照顧與陪伴，Kiwi遞餅乾給MANUKA、調整發箍、放慢腳步配合、拿鑰匙開門，並答應協助直播。",
+      "label": "順從MANUKA的規...",
+      "weight": 51,
+      "description": "順從MANUKA的規劃，牽手過馬路，並同意請客\n• 拿著兩杯飲料走回來交給MANUKA\n• 陪伴MANUKA逛街，對MANUKA的飾品選擇提供有限反饋\n• 提醒MANUKA冷靜並質疑她購買零食的借口\n• Kiwi包容MANUKA的任性，幫忙提購物籃，並無奈地配合MANUKA的惡作劇，顯示照顧和容忍的關係。\n• 一起出游並照顧\n• 照顧與陪伴，Kiwi遞餅乾給MANUKA、調整發箍、放慢腳步配合、拿鑰匙開門，並答應協助直播。",
+      "source": "Kiwi",
+      "target": "MANUKA"
+    },
+    {
+      "title": "強度: 6\n描述: 走向點餐櫃檯為MANUKA點飲料",
+      "label": "走向點餐櫃檯為MAN...",
+      "weight": 6,
+      "description": "走向點餐櫃檯為MANUKA點飲料",
+      "source": "Kiwi",
+      "target": "飲料店"
+    },
+    {
+      "title": "強度: 8\n描述: 認為健康比較重要",
+      "label": "認為健康比較重要",
+      "weight": 8,
+      "description": "認為健康比較重要",
+      "source": "Kiwi",
+      "target": "健康"
+    },
+    {
+      "title": "強度: 5\n描述: 跟隨MANUKA進入服飾店",
+      "label": "跟隨MANUKA進入...",
+      "weight": 5,
+      "description": "跟隨MANUKA進入服飾店",
+      "source": "Kiwi",
+      "target": "服飾店"
+    },
+    {
+      "title": "強度: 8\n描述: Kiwi負責提著裝滿零食的購物籃，顯示其承擔重物的角色。",
+      "label": "Kiwi負責提著裝滿...",
+      "weight": 8,
+      "description": "Kiwi負責提著裝滿零食的購物籃，顯示其承擔重物的角色。",
+      "source": "Kiwi",
+      "target": "購物籃"
+    },
+    {
+      "title": "強度: 5\n描述: 擁有並提供",
+      "label": "擁有並提供",
+      "weight": 5,
+      "description": "擁有並提供",
+      "source": "Kiwi",
+      "target": "無糖飲料"
+    },
+    {
+      "title": "強度: 7\n描述: 提醒返回",
+      "label": "提醒返回",
+      "weight": 7,
+      "description": "提醒返回",
+      "source": "Kiwi",
+      "target": "家"
+    },
+    {
+      "title": "強度: 6\n描述: 購買與管理，Kiwi購買了零食，並提醒MANUKA先吃完再說。",
+      "label": "購買與管理，Kiwi...",
+      "weight": 6,
+      "description": "購買與管理，Kiwi購買了零食，並提醒MANUKA先吃完再說。",
+      "source": "Kiwi",
+      "target": "零食"
+    },
+    {
+      "title": "總強度: 74\n描述:\n催促Kiwi出門，並規劃行程\n• 拉著Kiwi走到飲料店前\n• 要求Kiwi幫忙拿飲料以便空出手自拍\n• 要求交換喝Kiwi的無糖飲料\n• 與Kiwi一起逛街購物，詢問Kiwi對飾品的意見\n• 請求Kiwi幫忙拿飲料並等待她試戴發箍\n• MANUKA向Kiwi撒嬌、耍賴，並討好Kiwi以購買更多零食，顯示依賴和親密關係。\n• MANUKA對Kiwi惡作劇，假裝要餵餅乾卻自己吃掉，顯示調皮和玩笑的關係。\n• 一起出游互動\n• 依賴與撒嬌，MANUKA向Kiwi索要餅乾、請求調整發箍、要求走慢一點、提議探險並邀請當直播助手。",
+      "label": "催促Kiwi出門，並...",
+      "weight": 74,
+      "description": "催促Kiwi出門，並規劃行程\n• 拉著Kiwi走到飲料店前\n• 要求Kiwi幫忙拿飲料以便空出手自拍\n• 要求交換喝Kiwi的無糖飲料\n• 與Kiwi一起逛街購物，詢問Kiwi對飾品的意見\n• 請求Kiwi幫忙拿飲料並等待她試戴發箍\n• MANUKA向Kiwi撒嬌、耍賴，並討好Kiwi以購買更多零食，顯示依賴和親密關係。\n• MANUKA對Kiwi惡作劇，假裝要餵餅乾卻自己吃掉，顯示調皮和玩笑的關係。\n• 一起出游互動\n• 依賴與撒嬌，MANUKA向Kiwi索要餅乾、請求調整發箍、要求走慢一點、提議探險並邀請當直播助手。",
+      "source": "MANUKA",
+      "target": "Kiwi"
+    },
+    {
+      "title": "強度: 9\n描述: 計劃前往作為行程第一站",
+      "label": "計劃前往作為行程第一...",
+      "weight": 9,
+      "description": "計劃前往作為行程第一站",
+      "source": "MANUKA",
+      "target": "車站前新開的飲料店"
+    },
+    {
+      "title": "強度: 9\n描述: 計劃前往作為行程第二站",
+      "label": "計劃前往作為行程第二...",
+      "weight": 9,
+      "description": "計劃前往作為行程第二站",
+      "source": "MANUKA",
+      "target": "很大的服飾店"
+    },
+    {
+      "title": "強度: 10\n描述: 計劃前往掃貨作為行程第三站",
+      "label": "計劃前往掃貨作為行程...",
+      "weight": 10,
+      "description": "計劃前往掃貨作為行程第三站",
+      "source": "MANUKA",
+      "target": "零食店"
+    },
+    {
+      "title": "總強度: 15\n描述:\n計劃前往作為行程最後一站\n• MANUKA提議去公園休息，並在公園的長椅上吃零食。",
+      "label": "計劃前往作為行程最後...",
+      "weight": 15,
+      "description": "計劃前往作為行程最後一站\n• MANUKA提議去公園休息，並在公園的長椅上吃零食。",
+      "source": "MANUKA",
+      "target": "公園"
+    },
+    {
+      "title": "強度: 6\n描述: 看到貓並評論其可愛，比較尾巴與自己的耳朵",
+      "label": "看到貓並評論其可愛，...",
+      "weight": 6,
+      "description": "看到貓並評論其可愛，比較尾巴與自己的耳朵",
+      "source": "MANUKA",
+      "target": "貓"
+    },
+    {
+      "title": "強度: 10\n描述: 擁有並認為比貓尾巴更可愛",
+      "label": "擁有並認為比貓尾巴更...",
+      "weight": 10,
+      "description": "擁有並認為比貓尾巴更可愛",
+      "source": "MANUKA",
+      "target": "狐狸耳朵"
+    },
+    {
+      "title": "強度: 8\n描述: 從事直播活動",
+      "label": "從事直播活動",
+      "weight": 8,
+      "description": "從事直播活動",
+      "source": "MANUKA",
+      "target": "直播"
+    },
+    {
+      "title": "強度: 7\n描述: 被比喻為倉鼠但否認，強調自己是狐狸",
+      "label": "被比喻為倉鼠但否認，...",
+      "weight": 7,
+      "description": "被比喻為倉鼠但否認，強調自己是狐狸",
+      "source": "MANUKA",
+      "target": "倉鼠"
+    },
+    {
+      "title": "強度: 8\n描述: 在飲料店前興奮地查看菜單新品",
+      "label": "在飲料店前興奮地查看...",
+      "weight": 8,
+      "description": "在飲料店前興奮地查看菜單新品",
+      "source": "MANUKA",
+      "target": "飲料店"
+    },
+    {
+      "title": "強度: 9\n描述: 選擇並點購草莓奶蓋，要求全糖、正常冰塊",
+      "label": "選擇並點購草莓奶蓋，...",
+      "weight": 9,
+      "description": "選擇並點購草莓奶蓋，要求全糖、正常冰塊",
+      "source": "MANUKA",
+      "target": "草莓奶蓋"
+    },
+    {
+      "title": "強度: 8\n描述: 要求店員提供愛心造型杯蓋",
+      "label": "要求店員提供愛心造型...",
+      "weight": 8,
+      "description": "要求店員提供愛心造型杯蓋",
+      "source": "MANUKA",
+      "target": "愛心造型杯蓋"
+    },
+    {
+      "title": "強度: 7\n描述: 要求Kiwi點餐時在草莓奶蓋中加入珍珠",
+      "label": "要求Kiwi點餐時在...",
+      "weight": 7,
+      "description": "要求Kiwi點餐時在草莓奶蓋中加入珍珠",
+      "source": "MANUKA",
+      "target": "珍珠"
+    },
+    {
+      "title": "強度: 8\n描述: 計畫拍攝飲料店裝潢上傳到社群",
+      "label": "計畫拍攝飲料店裝潢上...",
+      "weight": 8,
+      "description": "計畫拍攝飲料店裝潢上傳到社群",
+      "source": "MANUKA",
+      "target": "社群"
+    },
+    {
+      "title": "強度: 7\n描述: 對星星造型吸管感到驚喜",
+      "label": "對星星造型吸管感到驚...",
+      "weight": 7,
+      "description": "對星星造型吸管感到驚喜",
+      "source": "MANUKA",
+      "target": "星星造型吸管"
+    },
+    {
+      "title": "強度: 9\n描述: 試戴並喜歡狐狸耳朵發箍，認為與自己的造型相配",
+      "label": "試戴並喜歡狐狸耳朵發...",
+      "weight": 9,
+      "description": "試戴並喜歡狐狸耳朵發箍，認為與自己的造型相配",
+      "source": "MANUKA",
+      "target": "狐狸耳朵發箍"
+    },
+    {
+      "title": "強度: 7\n描述: 試戴兔子耳朵發箍，覺得可愛但難以選擇",
+      "label": "試戴兔子耳朵發箍，覺...",
+      "weight": 7,
+      "description": "試戴兔子耳朵發箍，覺得可愛但難以選擇",
+      "source": "MANUKA",
+      "target": "兔子耳朵發箍"
+    },
+    {
+      "title": "強度: 8\n描述: 發現並喜歡小狐狸吊飾項煉，認為與自己的造型超配",
+      "label": "發現並喜歡小狐狸吊飾...",
+      "weight": 8,
+      "description": "發現並喜歡小狐狸吊飾項煉，認為與自己的造型超配",
+      "source": "MANUKA",
+      "target": "小狐狸吊飾項煉"
+    },
+    {
+      "title": "強度: 7\n描述: 認為小鈴鐺手煉很可愛，喜歡它發出的聲音",
+      "label": "認為小鈴鐺手煉很可愛...",
+      "weight": 7,
+      "description": "認為小鈴鐺手煉很可愛，喜歡它發出的聲音",
+      "source": "MANUKA",
+      "target": "小鈴鐺手煉"
+    },
+    {
+      "title": "強度: 6\n描述: 注意到發帶顏色與自己的領帶很搭，詢問Kiwi意見",
+      "label": "注意到發帶顏色與自己...",
+      "weight": 6,
+      "description": "注意到發帶顏色與自己的領帶很搭，詢問Kiwi意見",
+      "source": "MANUKA",
+      "target": "發帶"
+    },
+    {
+      "title": "強度: 9\n描述: 認為快樂才是最重要的，反駁Kiwi的健康觀點",
+      "label": "認為快樂才是最重要的...",
+      "weight": 9,
+      "description": "認為快樂才是最重要的，反駁Kiwi的健康觀點",
+      "source": "MANUKA",
+      "target": "快樂"
+    },
+    {
+      "title": "強度: 8\n描述: 進入服飾店購物，對各種飾品表現出興奮",
+      "label": "進入服飾店購物，對各...",
+      "weight": 8,
+      "description": "進入服飾店購物，對各種飾品表現出興奮",
+      "source": "MANUKA",
+      "target": "服飾店"
+    },
+    {
+      "title": "總強度: 15\n描述:\n試戴後最喜歡並決定購買\n• 佩戴與依賴，MANUKA佩戴發箍，並認為戴好後走路比較不會累。",
+      "label": "試戴後最喜歡並決定購...",
+      "weight": 15,
+      "description": "試戴後最喜歡並決定購買\n• 佩戴與依賴，MANUKA佩戴發箍，並認為戴好後走路比較不會累。",
+      "source": "MANUKA",
+      "target": "狐狸發箍"
+    },
+    {
+      "title": "強度: 8\n描述: 進入並興奮地瀏覽各種零食",
+      "label": "進入並興奮地瀏覽各種...",
+      "weight": 8,
+      "description": "進入並興奮地瀏覽各種零食",
+      "source": "MANUKA",
+      "target": "大型零食店"
+    },
+    {
+      "title": "強度: 7\n描述: 對新出的彩虹巧克力感到興奮",
+      "label": "對新出的彩虹巧克力感...",
+      "weight": 7,
+      "description": "對新出的彩虹巧克力感到興奮",
+      "source": "MANUKA",
+      "target": "彩虹巧克力"
+    },
+    {
+      "title": "強度: 7\n描述: 對期間限定的草莓口味洋芋片感興趣",
+      "label": "對期間限定的草莓口味...",
+      "weight": 7,
+      "description": "對期間限定的草莓口味洋芋片感興趣",
+      "source": "MANUKA",
+      "target": "草莓口味洋芋片"
+    },
+    {
+      "title": "總強度: 17\n描述:\n想購買新口味蜜糖牛奶的小熊餅乾\n• MANUKA在公園休息時急著想吃蜜糖牛奶口味的小熊餅乾。",
+      "label": "想購買新口味蜜糖牛奶...",
+      "weight": 17,
+      "description": "想購買新口味蜜糖牛奶的小熊餅乾\n• MANUKA在公園休息時急著想吃蜜糖牛奶口味的小熊餅乾。",
+      "source": "MANUKA",
+      "target": "小熊餅乾"
+    },
+    {
+      "title": "強度: 6\n描述: 對新出的布丁感興趣並想購買",
+      "label": "對新出的布丁感興趣並...",
+      "weight": 6,
+      "description": "對新出的布丁感興趣並想購買",
+      "source": "MANUKA",
+      "target": "布丁"
+    },
+    {
+      "title": "強度: 9\n描述: 認為狐狸造型的洋芋片是為她設計的，一定要買",
+      "label": "認為狐狸造型的洋芋片...",
+      "weight": 9,
+      "description": "認為狐狸造型的洋芋片是為她設計的，一定要買",
+      "source": "MANUKA",
+      "target": "狐狸造型洋芋片"
+    },
+    {
+      "title": "強度: 6\n描述: 對兒童零食區的動物造型軟糖感興趣",
+      "label": "對兒童零食區的動物造...",
+      "weight": 6,
+      "description": "對兒童零食區的動物造型軟糖感興趣",
+      "source": "MANUKA",
+      "target": "軟糖"
+    },
+    {
+      "title": "強度: 6\n描述: 對新出的巧克力棒感興趣",
+      "label": "對新出的巧克力棒感興...",
+      "weight": 6,
+      "description": "對新出的巧克力棒感興趣",
+      "source": "MANUKA",
+      "target": "巧克力棒"
+    },
+    {
+      "title": "強度: 8\n描述: 以VTuber身份為理由，聲稱需要試吃評價零食",
+      "label": "以VTuber身份為...",
+      "weight": 8,
+      "description": "以VTuber身份為理由，聲稱需要試吃評價零食",
+      "source": "MANUKA",
+      "target": "VTuber"
+    },
+    {
+      "title": "強度: 9\n描述: MANUKA極力想購買抹茶蛋糕卷，因為它看起來超級好吃且期間限定。",
+      "label": "MANUKA極力想購...",
+      "weight": 9,
+      "description": "MANUKA極力想購買抹茶蛋糕卷，因為它看起來超級好吃且期間限定。",
+      "source": "MANUKA",
+      "target": "抹茶蛋糕卷"
+    },
+    {
+      "title": "總強度: 26\n描述:\nMANUKA熱愛零食，購買了大量零食，並計劃在公園享用。\n• 購買並食用\n• 購買與計劃消耗，MANUKA今天買了零食，打算很快吃完並直播開箱。",
+      "label": "MANUKA熱愛零食...",
+      "weight": 26,
+      "description": "MANUKA熱愛零食，購買了大量零食，並計劃在公園享用。\n• 購買並食用\n• 購買與計劃消耗，MANUKA今天買了零食，打算很快吃完並直播開箱。",
+      "source": "MANUKA",
+      "target": "零食"
+    },
+    {
+      "title": "強度: 8\n描述: MANUKA對狐狸造型的洋芋片感到好奇，並想拍照上傳。",
+      "label": "MANUKA對狐狸造...",
+      "weight": 8,
+      "description": "MANUKA對狐狸造型的洋芋片感到好奇，並想拍照上傳。",
+      "source": "MANUKA",
+      "target": "狐狸造型的洋芋片"
+    },
+    {
+      "title": "強度: 7\n描述: 進行活動",
+      "label": "進行活動",
+      "weight": 7,
+      "description": "進行活動",
+      "source": "MANUKA",
+      "target": "拍照"
+    },
+    {
+      "title": "強度: 6\n描述: 看見並調侃",
+      "label": "看見並調侃",
+      "weight": 6,
+      "description": "看見並調侃",
+      "source": "MANUKA",
+      "target": "鴿子"
+    },
+    {
+      "title": "強度: 7\n描述: 希望探索",
+      "label": "希望探索",
+      "weight": 7,
+      "description": "希望探索",
+      "source": "MANUKA",
+      "target": "新的零食店"
+    },
+    {
+      "title": "強度: 6\n描述: 飲用",
+      "label": "飲用",
+      "weight": 6,
+      "description": "飲用",
+      "source": "MANUKA",
+      "target": "飲料"
+    },
+    {
+      "title": "強度: 4\n描述: 拒絕但最終嘗試",
+      "label": "拒絕但最終嘗試",
+      "weight": 4,
+      "description": "拒絕但最終嘗試",
+      "source": "MANUKA",
+      "target": "無糖飲料"
+    },
+    {
+      "title": "總強度: 13\n描述:\n想吃最後一包\n• 喜愛與享用，MANUKA稱讚餅乾好吃，並表示餅乾給了力量。",
+      "label": "想吃最後一包",
+      "weight": 13,
+      "description": "想吃最後一包\n• 喜愛與享用，MANUKA稱讚餅乾好吃，並表示餅乾給了力量。",
+      "source": "MANUKA",
+      "target": "餅乾"
+    },
+    {
+      "title": "強度: 5\n描述: 欣賞，MANUKA認為夕陽漂亮，建議慢慢走以免浪費景色。",
+      "label": "欣賞，MANUKA認...",
+      "weight": 5,
+      "description": "欣賞，MANUKA認為夕陽漂亮，建議慢慢走以免浪費景色。",
+      "source": "MANUKA",
+      "target": "夕陽"
+    },
+    {
+      "title": "強度: 6\n描述: 提議探險，MANUKA想下次去這間新開的甜品店探險。",
+      "label": "提議探險，MANUK...",
+      "weight": 6,
+      "description": "提議探險，MANUKA想下次去這間新開的甜品店探險。",
+      "source": "MANUKA",
+      "target": "新開的甜品店"
+    },
+    {
+      "title": "強度: 8\n描述: 計劃進行，MANUKA計劃明天直播開箱今天買的零食，並邀請Kiwi當助手。",
+      "label": "計劃進行，MANUK...",
+      "weight": 8,
+      "description": "計劃進行，MANUKA計劃明天直播開箱今天買的零食，並邀請Kiwi當助手。",
+      "source": "MANUKA",
+      "target": "直播開箱"
+    },
+    {
+      "title": "強度: 7\n描述: 休息，MANUKA疲憊時想去沙發上躺平休息。",
+      "label": "休息，MANUKA疲...",
+      "weight": 7,
+      "description": "休息，MANUKA疲憊時想去沙發上躺平休息。",
+      "source": "MANUKA",
+      "target": "沙發"
+    },
+    {
+      "title": "強度: 5\n描述: 觀看直播並送貼圖",
+      "label": "觀看直播並送貼圖",
+      "weight": 5,
+      "description": "觀看直播並送貼圖",
+      "source": "觀眾",
+      "target": "MANUKA"
+    },
+    {
+      "title": "強度: 7\n描述: 贈送貼圖給MANUKA",
+      "label": "贈送貼圖給MANUK...",
+      "weight": 7,
+      "description": "贈送貼圖給MANUKA",
+      "source": "觀眾",
+      "target": "貼圖"
+    },
+    {
+      "title": "強度: 8\n描述: 內容將MANUKA吃東西的樣子比喻為倉鼠",
+      "label": "內容將MANUKA吃...",
+      "weight": 8,
+      "description": "內容將MANUKA吃東西的樣子比喻為倉鼠",
+      "source": "貼圖",
+      "target": "倉鼠"
+    }
+  ]
+}

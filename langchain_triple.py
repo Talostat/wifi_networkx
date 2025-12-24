@@ -3,22 +3,14 @@ from langchain_core.messages import HumanMessage, SystemMessage
 import json
 import re
 import os
-from dotenv import load_dotenv
-
-# 載入 .env 檔案
-load_dotenv()
 
 # 1. 設定 DeepSeek API (使用 OpenAI 兼容模式)
-DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
-DEEPSEEK_BASE_URL = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
+DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY", "")
+DEEPSEEK_BASE_URL = "https://api.deepseek.com"
 
 # 驗證 API Key
 if not DEEPSEEK_API_KEY:
-    raise ValueError(
-        "❌ 錯誤：未設置 DEEPSEEK_API_KEY。\n"
-        "請在 .env 檔案中設置：DEEPSEEK_API_KEY=your-api-key\n"
-        "或複製 .env.example 為 .env 並填入你的 API Key"
-    )
+    raise ValueError("❌ 錯誤：未設置 DEEPSEEK_API_KEY 環境變數。請設置後重新執行。")
 
 # 2. 初始化 DeepSeek LLM
 llm = ChatOpenAI(
@@ -29,88 +21,33 @@ llm = ChatOpenAI(
 )
 
 # 3. 定義提示詞模板
-system_prompt = """你是一個知識圖譜構建專家。任務是從文字內容中提取三元組，只關注三個維度：
+system_prompt = """你是一個專業的信息抽取專家。
 
-===三個提取維度===
-1. 話題（Topic）：對話中討論的主要話題、事件、活動
-   例如：出門遊玩、購物、散步、直播、討論
+任務：從提供的文本中提取結構化的三元組（主體、關係、客體）。
 
-2. 地點（Location）：提及的具體地點、地區、場所
-   例如：飲料店、公園、家中、馬路、車站前、戶外
+重要規則：
+1. 每個三元組的主體必須是單數實體（如：Kiwi、MANUKA、公園等），不允許在主體中同時出現兩個人名
+2. 優先提取主要參與者的個人行為、特徵和狀態
+3. 提取群體活動時，應該分別為每個參與者建立三元組
 
-3. 物品（Object）：提及的具體物品、事物、物體
-   例如：狐狸耳朵、貼圖、貓、飲料、手
-
-===三種關係類型===
-1. 話題-話題關聯：(話題A, 關係詞, 話題B)
-   例如：(出門遊玩, 包括, 購物)、(散步, 進行到, 購飲料)
-
-2. 話題-地點關聯：(話題, 發生地, 地點) 或 (話題, 地點, 地點)
-   例如：(購物, 發生於, 飲料店)、(散步, 經過, 公園)
-
-3. 話題-物品關聯：(話題, 涉及, 物品) 或 (物品, 出現於, 話題)
-   例如：(購飲料, 涉及, 飲料)、(直播, 收到, 貼圖)
-
-===嚴格規則===
-A. 只提取以下三種關係，其他一律排除：
-   - 人物、人名、身份、性格、情感、行為動作 → 排除
-   - 只保留話題、地點、物品三者的明確關聯
-
-B. 實體來源：
-   - 話題：明確的活動、事件、行為（必須是名詞形式，如「購物」而非「買」）
-   - 地點：具體的地名、場所名稱
-   - 物品：具體的物品名稱、事物
-
-C. 排除項目：
-   - 所有人名和人物相關信息
-   - 情感、性格、形容詞
-   - 對話內容、言論
-   - 時間條件
-   - 推斷或自行添加的實體
-
-===良好範例===
-✓ (出門遊玩, 包括, 購物) - 話題-話題
-✓ (購物, 發生於, 飲料店) - 話題-地點
-✓ (直播, 收到, 貼圖) - 話題-物品
-✓ (散步, 經過, 公園) - 話題-地點
-
-===不良範例===
-✗ (Kiwi, 結伴, MANUKA) - 人物排除
-✗ (MANUKA, 感到, 興奮) - 情感排除
-✗ (貓, 很, 可愛) - 形容詞排除
-✗ (兩人, 牽手, 過馬路) - 人物行為排除，應改為(散步, 發生於, 馬路)
-
-===輸出格式===
-JSON格式，每個話題包含：
-- event_id: E1, E2等
-- event_name: 話題簡述
-- main_topics: 該話題涉及的主要事項列表
-- triples: 三元組數組，格式為 [subject, relation, object, entity_type]
-  其中 entity_type 為：topic_topic、topic_location、topic_object
-
-===範例輸出===
+輸出格式為JSON，包含以下結構：
 {
   "events": [
     {
       "event_id": "E1",
-      "event_name": "規劃出門",
-      "main_topics": ["出門遊玩", "購物規劃"],
+      "event_name": "事件名稱",
+      "main_subjects": ["主體1", "主體2"],
       "triples": [
-        ["出門遊玩", "包括", "購物", "topic_topic"],
-        ["購物", "發生於", "飲料店", "topic_location"],
-        ["購物", "涉及", "飲料", "topic_object"]
+        ["主體", "關係", "客體", "類別"],
+        ...
       ]
     }
   ]
 }
 
-===提取指南===
-1. 先識別所有話題、地點、物品
-2. 只連接這三種實體之間的明確關係
-3. 排除所有人物相關信息
-4. 每個三元組應清晰且獨立成立
-5. 嚴格遵循三種關係類型
-6. 謝詞要簡潔（發生於、包括、涉及、經過、前往等）"""
+類別可以包括：行為、特徵、狀態、關係等。
+"""
+
 
 def extract_triples_from_text(text, source_name):
     """從文本中提取三元組"""
