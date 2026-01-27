@@ -66,23 +66,7 @@ STYLE_CONFIG = {
 PHYSICS_CONFIG = """
 {
   "physics": {
-    "forceAtlas2Based": {
-      "gravitationalConstant": -50,
-      "centralGravity": 0.01,
-      "springLength": 100,
-      "springConstant": 0.08,
-      "damping": 0.9,
-      "avoidOverlap": 0.5
-    },
-    "minVelocity": 0.75,
-    "solver": "forceAtlas2Based",
-    "stabilization": {
-      "enabled": true,
-      "iterations": 2000,
-      "updateInterval": 25,
-      "onlyDynamicEdges": false,
-      "fit": true
-    }
+    "enabled": false
   },
   "interaction": {
     "dragNodes": true,
@@ -164,10 +148,6 @@ class KnowledgeGraphVisualizer:
                     self.G.nodes[node]['community'] = i
                     self.G.nodes[node]['community_color'] = color
 
-                    # 更新 title 添加社區信息
-                    current_title = self.G.nodes[node].get('title', '')
-                    self.G.nodes[node]['title'] = current_title + f"<br>Community: {i}"
-
         except Exception as e:
             print(f"⚠ Louvain 社區檢測失敗: {e}")
             # 如果失敗，確保沒有殘留的 community_color 屬性影響顯示
@@ -184,93 +164,62 @@ class KnowledgeGraphVisualizer:
             self._process_single_data_block(source_data)
 
     def _process_single_data_block(self, source_data):
-        """處理單個數據塊"""
+        """處理單個數據塊 - 層級聚合方式"""
+        keys = {'entities', 'relationships', 'batch_index'}
+        missing = keys - source_data.keys()
+        if missing:
+            raise ValueError(f"數據塊缺少：{', '.join(missing)}")
+
+        batch_index = source_data.get('batch_index')
 
         # 1. 處理實體 (Entities)
-        if 'entities' in source_data:
-            for entity in source_data['entities']:
-                name = entity.get('entity_name')
-                etype = entity.get('entity_type', '未知')
-                desc = entity.get('entity_description', '')
+        for entity in source_data['entities']:
+            name = entity.get('entity_name')
+            etype = entity.get('entity_type', '未知')
+            desc = entity.get('entity_description', '')
 
-                if name:
-                    if self.G.has_node(name):
-                        # 節點已存在，合併信息
-                        node = self.G.nodes[name]
-                        # 如果類型是 '未知'，嘗試更新為新類型
-                        if node.get('group') == '未知' and etype != '未知':
-                            node['group'] = etype
-
-                        # 合併描述 (避免重複)
-                        current_desc = node.get('description', '')
-                        if desc and desc not in current_desc:
-                            new_desc = f"{current_desc}\n• {desc}" if current_desc else desc
-                            node['description'] = new_desc
-                            node['title'] = self._format_tooltip(name, node['group'], new_desc)
-                    else:
-                        # 新節點
-                        self.G.add_node(name,
-                                      group=etype,
-                                      title=self._format_tooltip(name, etype, desc),
-                                      description=desc)
+            if name:
+                # 創建或更新節點
+                if not self.G.has_node(name):
+                    self.G.add_node(name,
+                                    group=etype,
+                                    description=desc)
+                else:
+                    # 更新現有節點的描述和標題
+                    if desc:
+                        self.G.nodes[name]['description'] = desc
 
         # 2. 處理關係 (Relationships)
-        if 'relationships' in source_data:
-            for rel in source_data['relationships']:
-                src = rel.get('source_entity')
-                tgt = rel.get('target_entity')
-                desc = rel.get('relationship_description', '')
-                strength = int(rel.get('relationship_strength', 1))
+        for rel in source_data['relationships']:
+            src = rel.get('source_entity')
+            tgt = rel.get('target_entity')
+            desc = rel.get('relationship_description', '')
+            #strength = int(rel.get('relationship_strength', 1))
 
-                if src and tgt:
-                    # 確保節點存在
-                    if not self.G.has_node(src):
-                        self.G.add_node(src, group='未知', title=src)
-                    if not self.G.has_node(tgt):
-                        self.G.add_node(tgt, group='未知', title=tgt)
+            if src and tgt:
+                # 確保節點存在
+                if not self.G.has_node(src):
+                    self.G.add_node(src, group='未知')
 
-                    # 處理邊
-                    if self.G.has_edge(src, tgt):
-                        # 邊已存在，累加權重並合併描述
-                        edge = self.G[src][tgt]
-                        edge['weight'] += strength
+                if not self.G.has_node(tgt):
+                    self.G.add_node(tgt, group='未知')
 
-                        current_desc = edge.get('description', '')
-                        if desc and desc not in current_desc:
-                            new_desc = f"{current_desc}\n• {desc}"
-                            edge['description'] = new_desc
-                            edge['title'] = f"總強度: {edge['weight']}\n描述:\n{new_desc}"
-                    else:
-                        # 新邊
-                        # 標籤過長時截斷
-                        label = desc[:10] + '...' if len(desc) > 10 else desc
-                        self.G.add_edge(src, tgt,
-                                      title=f"強度: {strength}\n描述: {desc}",
-                                      label=label,
-                                      weight=strength,
-                                      description=desc)
+                # # 添加關係邊
+                # if self.G.has_edge(src, tgt):
+                #     # 邊已存在，累加權重
+                #     edge = self.G[src][tgt]
+                #     edge['weight'] += strength
+                #     edge['source'] = batch_index
+                #     current_desc = edge.get('description', '')
+                #     if desc and desc not in current_desc:
+                #         edge['description'] = f"{current_desc}\n• {desc}"
+                #         edge['title'] = f"強度: {edge['weight']}\n描述: {edge['description']}"
+                # else:
+                    # 新邊
+                self.G.add_edge(src, tgt,
+                                description=desc,
+                                batch_source=batch_index)
 
-        # 3. 兼容舊格式 (Events)
-        if 'events' in source_data:
-            self._process_legacy_events(source_data['events'])
-
-    def _process_legacy_events(self, events):
-        """處理舊版 event 格式數據"""
-        for event in events:
-            event_name = event.get('event_name', '')
-            # 主事件節點
-            if event_name:
-                self.G.add_node(event_name, group='事件', title=f"事件: {event_name}")
-
-            # 處理三元組
-            for triple in event.get('triples', []):
-                if isinstance(triple, list) and len(triple) >= 3:
-                    subj, rel, obj = triple[0], triple[1], triple[2]
-                    cat = triple[3] if len(triple) > 3 else '关联'
-
-                    self.G.add_node(subj, group='未知', title=subj)
-                    self.G.add_node(obj, group='未知', title=obj)
-                    self.G.add_edge(subj, obj, label=rel, title=rel, group=cat)
 
     def _format_tooltip(self, name, etype, desc):
         """格式化 HTML Tooltip"""
@@ -303,34 +252,19 @@ class KnowledgeGraphVisualizer:
         except Exception as e:
             print(f"❌ JSON 導出失敗: {e}")
 
-        # 2. 導出為 GraphML (可導入 Gephi, Cytoscape)
-        try:
-            graphml_file = f"{output_prefix}.graphml"
-            # GraphML 對數據類型比較敏感，創建一個副本進行清理
-            G_export = self.G.copy()
-            for node, attrs in G_export.nodes(data=True):
-                for k, v in attrs.items():
-                    if v is None:
-                        attrs[k] = ""
-                    elif not isinstance(v, (str, int, float, bool)):
-                        attrs[k] = str(v)
-
-            nx.write_graphml(G_export, graphml_file)
-            print(f"✅ GraphML 結構已保存至: {graphml_file}")
-        except Exception as e:
-            print(f"⚠ GraphML 導出失敗: {e}")
-
     def generate_html(self, output_file="graph_analysis.html"):
         """生成 Pyvis HTML"""
         print(f"🎨 正在生成可視化文件: {output_file}...")
 
-        net = Network(height="900px", width="100%", bgcolor="#1a1a1a", font_color="white", select_menu=True, filter_menu=True)
+        net = Network(height="900px", width="100%", bgcolor="#ffffff", font_color="black", select_menu=True, filter_menu=True)
 
         # 應用物理配置
         net.set_options(PHYSICS_CONFIG)
 
-        # 轉換 NetworkX 圖到 Pyvis
-        # 我們手動添加節點和邊以獲得最大控制權
+        # 預計算佈局 (因為物理引擎已關閉)
+        print("📐 正在計算靜態佈局...")
+        # scale參數調整節點間距
+        pos = nx.spring_layout(self.G, seed=42, k=2, scale=500)
 
         # 添加節點
         for node, attrs in self.G.nodes(data=True):
@@ -345,17 +279,22 @@ class KnowledgeGraphVisualizer:
             # 優先使用社區顏色，如果沒有則使用組顏色
             node_color = attrs.get('community_color', style['color'])
 
+            # 獲取佈局座標
+            x, y = pos[node]
+
             net.add_node(
                 node,
                 label=node,
-                title=attrs.get('title', node),
+                # title=attrs.get('title', node),
                 group=group,
                 color=node_color,
                 shape=style['shape'],
                 size=size,
+                x=x, # 設置靜態座標
+                y=y, # 設置靜態座標
                 borderWidth=2,
                 shadow=True,
-                font={'size': 14, 'color': 'white', 'face': 'Microsoft YaHei'}
+                font={'size': 14, 'color': 'black', 'face': 'Microsoft YaHei'}
             )
 
         # 添加邊
@@ -364,20 +303,19 @@ class KnowledgeGraphVisualizer:
 
             # 動態寬度
             width = 1 + (weight * 0.5)
-
-            # 邊的顏色根據源節點顏色稍微變暗或固定
-            color = "#AAB7B8" # 默認灰藍色
+            # 邊的顏色根據強度
             if weight >= 8:
-                color = "#FF6B6B" # 強關係用紅色
+                color = "#FF6B6B"  # 強關係用紅色
+            else:
+                color = "#AAB7B8"  # 默認灰藍色
 
             net.add_edge(
                 u, v,
-                label=attrs.get('label', ''),
-                title=attrs.get('title', ''),
+                # label=attrs.get('label', ''),
                 width=width,
                 color={'color': color, 'opacity': 0.8},
                 arrows={'to': {'enabled': True, 'scaleFactor': 0.5}},
-                font={'size': 10, 'color': 'white', 'strokeWidth': 0, 'align': 'middle', 'background': 'rgba(0,0,0,0.6)'},
+                font={'size': 10, 'color': 'black', 'strokeWidth': 0, 'align': 'middle', 'background': 'rgba(255,255,255,0.7)'},
                 smooth={'type': 'curvedCW', 'roundness': 0.2}
             )
 
@@ -394,13 +332,13 @@ class KnowledgeGraphVisualizer:
             print(f"❌ 保存文件失敗: {e}")
 
 def main():
-    input_file = "triples_comparison_categorized.json"
-    output_file = "graph_analysis.html"
-    output_data_prefix = "graph_analysis"
+    input_file = "triples_comparison_categorized_messages.json"
+    output_file_name = "graph_messages"
+    output_file = f"{output_file_name}.html"
 
     visualizer = KnowledgeGraphVisualizer(input_file)
     visualizer.build_graph()
-    visualizer.export_graph_data(output_data_prefix)
+    visualizer.export_graph_data(output_file_name)
     visualizer.generate_html(output_file)
 
 if __name__ == "__main__":

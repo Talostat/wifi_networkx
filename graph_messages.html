@@ -1,0 +1,428 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+                <link href="lib/tom-select/tom-select.css" rel="stylesheet">
+                <script src="lib/tom-select/tom-select.complete.min.js"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 900px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+                <div id="select-menu" class="card-header">
+                    <div class="row no-gutters">
+                        <div class="col-10 pb-2">
+                            <select
+                            class="form-select"
+                            aria-label="Default select example"
+                            onchange="selectNode([value]);"
+                            id="select-node"
+                            placeholder="Select node..."
+                            >
+                                <option selected>Select a Node by ID</option>
+                                
+                                    <option value="Kiwi">Kiwi</option>
+                                
+                                    <option value="MANUKA">MANUKA</option>
+                                
+                                    <option value="家門">家門</option>
+                                
+                                    <option value="車站前新開的飲料店">車站前新開的飲料店</option>
+                                
+                                    <option value="很大的服飾店">很大的服飾店</option>
+                                
+                                    <option value="零食店">零食店</option>
+                                
+                                    <option value="公園">公園</option>
+                                
+                                    <option value="貓">貓</option>
+                                
+                                    <option value="狐狸耳朵">狐狸耳朵</option>
+                                
+                                    <option value="直播">直播</option>
+                                
+                                    <option value="觀眾">觀眾</option>
+                                
+                                    <option value="大貼圖">大貼圖</option>
+                                
+                                    <option value="倉鼠">倉鼠</option>
+                                
+                                    <option value="馬路">馬路</option>
+                                
+                                    <option value="飲料店">飲料店</option>
+                                
+                                    <option value="草莓奶蓋">草莓奶蓋</option>
+                                
+                                    <option value="珍珠">珍珠</option>
+                                
+                                    <option value="愛心造型杯蓋">愛心造型杯蓋</option>
+                                
+                                    <option value="星星造型吸管">星星造型吸管</option>
+                                
+                                    <option value="社群">社群</option>
+                                
+                                    <option value="狐狸耳朵發箍">狐狸耳朵發箍</option>
+                                
+                                    <option value="兔子耳朵發箍">兔子耳朵發箍</option>
+                                
+                                    <option value="貓耳發箍">貓耳發箍</option>
+                                
+                                    <option value="狐狸吊飾項鍊">狐狸吊飾項鍊</option>
+                                
+                                    <option value="小鈴鐺手鍊">小鈴鐺手鍊</option>
+                                
+                                    <option value="發帶">發帶</option>
+                                
+                                    <option value="服飾店">服飾店</option>
+                                
+                                    <option value="狐狸發箍">狐狸發箍</option>
+                                
+                                    <option value="大型零食店">大型零食店</option>
+                                
+                                    <option value="彩虹巧克力">彩虹巧克力</option>
+                                
+                                    <option value="草莓口味洋芋片">草莓口味洋芋片</option>
+                                
+                                    <option value="小熊餅乾">小熊餅乾</option>
+                                
+                                    <option value="布丁">布丁</option>
+                                
+                                    <option value="狐狸造型洋芋片">狐狸造型洋芋片</option>
+                                
+                                    <option value="動物造型軟糖">動物造型軟糖</option>
+                                
+                                    <option value="巧克力棒">巧克力棒</option>
+                                
+                                    <option value="試衣間">試衣間</option>
+                                
+                                    <option value="兒童零食區">兒童零食區</option>
+                                
+                                    <option value="購物籃">購物籃</option>
+                                
+                                    <option value="抹茶蛋糕卷">抹茶蛋糕卷</option>
+                                
+                                    <option value="零食">零食</option>
+                                
+                                    <option value="狐狸造型的洋芋片">狐狸造型的洋芋片</option>
+                                
+                                    <option value="長椅">長椅</option>
+                                
+                                    <option value="鴿子">鴿子</option>
+                                
+                                    <option value="飲料">飲料</option>
+                                
+                                    <option value="餅乾">餅乾</option>
+                                
+                                    <option value="椅子">椅子</option>
+                                
+                                    <option value="家">家</option>
+                                
+                                    <option value="新開的甜品店">新開的甜品店</option>
+                                
+                                    <option value="沙發">沙發</option>
+                                
+                            </select>
+                        </div>
+                        <div class="col-2 pb-2">
+                            <button type="button" class="btn btn-primary btn-block" onclick="neighbourhoodHighlight({nodes: []});">Reset Selection</button>
+                        </div>
+                    </div>
+                </div>
+            
+            
+              <div id="filter-menu" class="card-header">
+                <div class="row no-gutters">
+                  <div class="col-3 pb-2">
+                    <select
+                            class="form-select"
+                            aria-label="Default select example"
+                            onchange="updateFilter(value, 'item')"
+                            id="select-item"
+                        >
+                        <option value="">Select a network item</option>
+                        <option value="edge">edge</option>
+                        <option value="node">node</option>
+                    </select>
+                  </div>
+                  <div class="col-3 pb-2">
+                    <select
+                            class="form-select"
+                            aria-label="Default select example"
+                            onchange="updateFilter(value, 'property')"
+                            id="select-property"
+                        >
+                        <option value="">Select a property...</option>
+                    </select>
+                  </div>
+                  <div class="col-3 pb-2">
+                    <select
+                            class="form-select"
+                            aria-label="Default select example"
+                            id="select-value"
+                        >
+                        <option value="">Select value(s)...</option>
+                    </select>
+                  </div>
+                  <div class="col-1 pb-2">
+                    <button type="button" class="btn btn-primary btn-block" onclick="highlightFilter(filter);">Filter</button>
+                  </div>
+                  <div class="col-2 pb-2">
+                    <button type="button" class="btn btn-primary btn-block" onclick="clearFilter(true)">Reset Selection</button>
+                  </div>
+                </div>
+              </div>
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+                  new TomSelect("#select-node",{
+                      create: false,
+                      sortField: {
+                          field: "text",
+                          direction: "asc"
+                      }
+                  });
+              
+
+              
+                  // explicitly using onItemAdd and this function as we need to save multiple values
+                  let updateValueFilter = function() {
+                      return function () {
+                      filter['value'].push(arguments[0])
+                      }
+                  }
+
+                  let valueControl = new TomSelect("#select-value",{
+                      maxItems: null,
+                      valueField: 'id',
+                      labelField: 'title',
+                      searchField: 'title',
+                      create: false,
+                      sortField: {
+                          field: "text",
+                          direction: "asc"
+                      },
+                      onItemAdd: updateValueFilter()
+                  });
+
+                  let addValues = function() {
+                      return function () {
+                          // clear the current value options and add the selected attribute values
+                          // tom-select handles duplicates
+                          let selectedProperty = arguments[0];
+                          valueControl.clear();
+                          valueControl.clearOptions();
+                          filter['value'] = []
+                          if (filter['item'] === 'node') {
+                              for (let each in allNodes) {
+                                  valueControl.addOption({
+                                      id:allNodes[each][selectedProperty],
+                                      title:allNodes[each][selectedProperty]
+                                  })
+                              }
+                          }
+                          else if (filter['item'] === 'edge') {
+                              for (let each in allEdges) {
+                                  valueControl.addOption({
+                                      id:allEdges[each][selectedProperty],
+                                      title:allEdges[each][selectedProperty]
+                                  })
+                              }
+                          }
+                      }
+                  };
+
+                  let propControl = new TomSelect("#select-property",{
+                      valueField: 'id',
+                      labelField: 'title',
+                      searchField: 'title',
+                      create: false,
+                      sortField: {
+                          field: "text",
+                          direction: "asc"
+                      },
+                      onItemAdd: addValues()
+                  });
+
+                  let addProperties = function() {
+                      return function () {
+                          // loops through the selected network item and adds the attributes to dropdown
+                          // tom-select handles duplicates
+                          clearFilter(false)
+                          if (arguments[0] === 'edge') {
+                              for (let each in allEdges) {
+                                  if (allEdges.hasOwnProperty(each)) {
+                                      for (let eachProp in allEdges[each]) {
+                                          if (allEdges[each].hasOwnProperty(eachProp)) {
+                                              propControl.addOption({id: eachProp, title: eachProp})
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                          else if (arguments[0] === 'node') {
+                              for (let each in allNodes) {
+                                  if (allNodes.hasOwnProperty(each)) {
+                                      for (let eachProp in allNodes[each]) {
+                                          if (allNodes[each].hasOwnProperty(eachProp)
+                                              && (eachProp !== 'hidden' && eachProp !== 'savedLabel'
+                                                  && eachProp !== 'hiddenLabel')) {
+                                              propControl.addOption({id: eachProp, title: eachProp})
+
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  };
+
+                  let itemControl = new TomSelect("#select-item",{
+                      create: false,
+                      sortField:{
+                          field: "text",
+                          direction: "asc"
+                      },
+                      onItemAdd: addProperties()
+                  });
+
+                  function clearFilter(reset) {
+                      // utility function to clear all the selected filter options
+                      // if reset is set to true, the existing filter will be removed
+                      // else, only the dropdown options are cleared
+                      propControl.clear();
+                      propControl.clearOptions();
+                      valueControl.clear();
+                      valueControl.clearOptions();
+                      filter = {
+                          item : '',
+                          property : '',
+                          value : []
+                      }
+                      if (reset) {
+                          itemControl.clear();
+                          filterHighlight({nodes: []})
+                      }
+                  }
+
+                  function updateFilter(value, key) {
+                      // key could be 'item' or 'property' and value is as selected in dropdown
+                      filter[key] = value
+                  }
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"borderWidth": 2, "font": {"color": "black"}, "group": "\u4eba\u7269", "id": "Kiwi", "label": "Kiwi", "shadow": true, "shape": "dot", "size": 50, "x": 8.620272422230524, "y": 260.7550027036596}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u4eba\u7269", "id": "MANUKA", "label": "MANUKA", "shadow": true, "shape": "dot", "size": 118, "x": 3.377143496497466, "y": 10.20676363321195}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u5bb6\u9580", "label": "\u5bb6\u9580", "shadow": true, "shape": "box", "size": 22, "x": -263.8793011450647, "y": -406.2925199095544}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u5834\u6240", "id": "\u8eca\u7ad9\u524d\u65b0\u958b\u7684\u98f2\u6599\u5e97", "label": "\u8eca\u7ad9\u524d\u65b0\u958b\u7684\u98f2\u6599\u5e97", "shadow": true, "shape": "dot", "size": 22, "x": -434.24506803441034, "y": 250.3276205098536}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u5834\u6240", "id": "\u5f88\u5927\u7684\u670d\u98fe\u5e97", "label": "\u5f88\u5927\u7684\u670d\u98fe\u5e97", "shadow": true, "shape": "dot", "size": 22, "x": 192.50528169802342, "y": 420.07570674086844}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u5834\u6240", "id": "\u96f6\u98df\u5e97", "label": "\u96f6\u98df\u5e97", "shadow": true, "shape": "dot", "size": 22, "x": -338.0485261066856, "y": 400.4277454154523}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u5834\u6240", "id": "\u516c\u5712", "label": "\u516c\u5712", "shadow": true, "shape": "dot", "size": 24, "x": 440.0532557724864, "y": -233.27856621745087}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u52d5\u7269", "id": "\u8c93", "label": "\u8c93", "shadow": true, "shape": "dot", "size": 22, "x": -379.74717229233596, "y": -285.44990194149955}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u6982\u5ff5", "id": "\u72d0\u72f8\u8033\u6735", "label": "\u72d0\u72f8\u8033\u6735", "shadow": true, "shape": "dot", "size": 22, "x": -404.6415870133291, "y": -56.38432699657683}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u4e8b\u4ef6", "id": "\u76f4\u64ad", "label": "\u76f4\u64ad", "shadow": true, "shape": "diamond", "size": 22, "x": 152.6766696009484, "y": -414.90505559019874}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u4eba\u7269", "id": "\u89c0\u773e", "label": "\u89c0\u773e", "shadow": true, "shape": "dot", "size": 26, "x": 217.71358997631833, "y": -428.46134015314266}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u5927\u8cbc\u5716", "label": "\u5927\u8cbc\u5716", "shadow": true, "shape": "box", "size": 24, "x": -404.907237963769, "y": -175.02878610074336}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u52d5\u7269", "id": "\u5009\u9f20", "label": "\u5009\u9f20", "shadow": true, "shape": "dot", "size": 24, "x": 41.63072301544824, "y": 466.8285924052098}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u5834\u6240", "id": "\u99ac\u8def", "label": "\u99ac\u8def", "shadow": true, "shape": "dot", "size": 22, "x": -450.9486999576638, "y": 53.6330757321325}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u5834\u6240", "id": "\u98f2\u6599\u5e97", "label": "\u98f2\u6599\u5e97", "shadow": true, "shape": "dot", "size": 24, "x": 121.27857863471094, "y": -477.22344609213496}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u8349\u8393\u5976\u84cb", "label": "\u8349\u8393\u5976\u84cb", "shadow": true, "shape": "box", "size": 22, "x": 317.67338655214644, "y": -351.50802773389034}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u73cd\u73e0", "label": "\u73cd\u73e0", "shadow": true, "shape": "box", "size": 22, "x": -216.83959968588044, "y": 465.49825686744896}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u611b\u5fc3\u9020\u578b\u676f\u84cb", "label": "\u611b\u5fc3\u9020\u578b\u676f\u84cb", "shadow": true, "shape": "box", "size": 22, "x": 427.7347300139777, "y": 303.1316290127398}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u661f\u661f\u9020\u578b\u5438\u7ba1", "label": "\u661f\u661f\u9020\u578b\u5438\u7ba1", "shadow": true, "shape": "box", "size": 22, "x": -196.59302066002573, "y": -438.96438068773654}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u6982\u5ff5", "id": "\u793e\u7fa4", "label": "\u793e\u7fa4", "shadow": true, "shape": "dot", "size": 22, "x": 389.0952194754403, "y": -239.13897771735006}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u72d0\u72f8\u8033\u6735\u767c\u7b8d", "label": "\u72d0\u72f8\u8033\u6735\u767c\u7b8d", "shadow": true, "shape": "box", "size": 22, "x": -465.70879293157003, "y": -20.885479729053586}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u5154\u5b50\u8033\u6735\u767c\u7b8d", "label": "\u5154\u5b50\u8033\u6735\u767c\u7b8d", "shadow": true, "shape": "box", "size": 22, "x": -395.93391980193684, "y": 326.28993258205696}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u8c93\u8033\u767c\u7b8d", "label": "\u8c93\u8033\u767c\u7b8d", "shadow": true, "shape": "box", "size": 22, "x": -114.00837344209141, "y": 439.8656020423542}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u72d0\u72f8\u540a\u98fe\u9805\u934a", "label": "\u72d0\u72f8\u540a\u98fe\u9805\u934a", "shadow": true, "shape": "box", "size": 22, "x": 91.66543390749196, "y": 380.37053309654397}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u5c0f\u9234\u943a\u624b\u934a", "label": "\u5c0f\u9234\u943a\u624b\u934a", "shadow": true, "shape": "box", "size": 22, "x": 50.231268837467915, "y": -463.46945701586606}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u767c\u5e36", "label": "\u767c\u5e36", "shadow": true, "shape": "box", "size": 22, "x": 469.0809375452152, "y": 224.53872651119235}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u5730\u9ede", "id": "\u670d\u98fe\u5e97", "label": "\u670d\u98fe\u5e97", "shadow": true, "shape": "dot", "size": 24, "x": 341.17229675050186, "y": 401.8001178404163}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u72d0\u72f8\u767c\u7b8d", "label": "\u72d0\u72f8\u767c\u7b8d", "shadow": true, "shape": "box", "size": 24, "x": 139.58558614593198, "y": 478.30687978414346}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u5834\u6240", "id": "\u5927\u578b\u96f6\u98df\u5e97", "label": "\u5927\u578b\u96f6\u98df\u5e97", "shadow": true, "shape": "dot", "size": 24, "x": -433.89159231538997, "y": -219.4323794279008}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u5f69\u8679\u5de7\u514b\u529b", "label": "\u5f69\u8679\u5de7\u514b\u529b", "shadow": true, "shape": "box", "size": 22, "x": -469.86505251807546, "y": -113.15780360014347}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u8349\u8393\u53e3\u5473\u6d0b\u828b\u7247", "label": "\u8349\u8393\u53e3\u5473\u6d0b\u828b\u7247", "shadow": true, "shape": "box", "size": 22, "x": -129.38897248535883, "y": -430.9912834182602}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u5c0f\u718a\u9905\u4e7e", "label": "\u5c0f\u718a\u9905\u4e7e", "shadow": true, "shape": "box", "size": 22, "x": 463.4474738062795, "y": -153.08427539507008}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u5e03\u4e01", "label": "\u5e03\u4e01", "shadow": true, "shape": "box", "size": 22, "x": -327.5718701336794, "y": 297.2190960890389}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u72d0\u72f8\u9020\u578b\u6d0b\u828b\u7247", "label": "\u72d0\u72f8\u9020\u578b\u6d0b\u828b\u7247", "shadow": true, "shape": "box", "size": 22, "x": -260.5108700289172, "y": 410.8652305963812}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u52d5\u7269\u9020\u578b\u8edf\u7cd6", "label": "\u52d5\u7269\u9020\u578b\u8edf\u7cd6", "shadow": true, "shape": "box", "size": 22, "x": -110.51149322839589, "y": 500.0}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u5de7\u514b\u529b\u68d2", "label": "\u5de7\u514b\u529b\u68d2", "shadow": true, "shape": "box", "size": 22, "x": 377.2014370573398, "y": -314.85666172527937}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u5834\u6240", "id": "\u8a66\u8863\u9593", "label": "\u8a66\u8863\u9593", "shadow": true, "shape": "dot", "size": 22, "x": -465.52297565724734, "y": 181.41275940525273}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u5834\u6240", "id": "\u5152\u7ae5\u96f6\u98df\u5340", "label": "\u5152\u7ae5\u96f6\u98df\u5340", "shadow": true, "shape": "dot", "size": 22, "x": 264.9885713799773, "y": 398.4701897685719}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u8cfc\u7269\u7c43", "label": "\u8cfc\u7269\u7c43", "shadow": true, "shape": "box", "size": 24, "x": 290.819600657935, "y": -412.51850835669904}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u62b9\u8336\u86cb\u7cd5\u5377", "label": "\u62b9\u8336\u86cb\u7cd5\u5377", "shadow": true, "shape": "box", "size": 22, "x": -16.048061484459286, "y": -475.3615804080802}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u96f6\u98df", "label": "\u96f6\u98df", "shadow": true, "shape": "box", "size": 24, "x": 470.678464265033, "y": 155.2457860171532}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u72d0\u72f8\u9020\u578b\u7684\u6d0b\u828b\u7247", "label": "\u72d0\u72f8\u9020\u578b\u7684\u6d0b\u828b\u7247", "shadow": true, "shape": "box", "size": 22, "x": -87.68045463183118, "y": -478.0871613475986}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u9577\u6905", "label": "\u9577\u6905", "shadow": true, "shape": "box", "size": 24, "x": -284.8098201354146, "y": -343.3991719743996}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u52d5\u7269", "id": "\u9d3f\u5b50", "label": "\u9d3f\u5b50", "shadow": true, "shape": "dot", "size": 24, "x": 352.98179114848074, "y": 311.77691849124136}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u98f2\u6599", "label": "\u98f2\u6599", "shadow": true, "shape": "box", "size": 24, "x": 495.20543368895534, "y": -12.346173413642646}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u9905\u4e7e", "label": "\u9905\u4e7e", "shadow": true, "shape": "box", "size": 24, "x": -459.8072614988964, "y": 117.66500242634389}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u6905\u5b50", "label": "\u6905\u5b50", "shadow": true, "shape": "box", "size": 22, "x": 467.73607048101155, "y": 86.65919642260005}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u5730\u9ede", "id": "\u5bb6", "label": "\u5bb6", "shadow": true, "shape": "dot", "size": 24, "x": 466.38917710251496, "y": -83.45779922669861}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u5730\u9ede", "id": "\u65b0\u958b\u7684\u751c\u54c1\u5e97", "label": "\u65b0\u958b\u7684\u751c\u54c1\u5e97", "shadow": true, "shape": "dot", "size": 22, "x": 432.59823933166257, "y": 25.093248695179607}, {"borderWidth": 2, "font": {"color": "black"}, "group": "\u7269\u54c1", "id": "\u6c99\u767c", "label": "\u6c99\u767c", "shadow": true, "shape": "box", "size": 22, "x": -375.03090961159904, "y": -338.7805486100764}]);
+                  edges = new vis.DataSet([{"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "Kiwi", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "MANUKA", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "Kiwi", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u5bb6\u9580", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "Kiwi", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u98f2\u6599\u5e97", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "Kiwi", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u670d\u98fe\u5e97", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "Kiwi", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u5927\u578b\u96f6\u98df\u5e97", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "Kiwi", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u8cfc\u7269\u7c43", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "Kiwi", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u516c\u5712", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "Kiwi", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u9577\u6905", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "Kiwi", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u9d3f\u5b50", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "Kiwi", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u98f2\u6599", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "Kiwi", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u96f6\u98df", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "Kiwi", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u9905\u4e7e", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "Kiwi", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u72d0\u72f8\u767c\u7b8d", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "Kiwi", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u5bb6", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u8eca\u7ad9\u524d\u65b0\u958b\u7684\u98f2\u6599\u5e97", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u5f88\u5927\u7684\u670d\u98fe\u5e97", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u96f6\u98df\u5e97", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u516c\u5712", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u8c93", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u72d0\u72f8\u8033\u6735", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u76f4\u64ad", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u5927\u8cbc\u5716", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u5009\u9f20", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u99ac\u8def", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u98f2\u6599\u5e97", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u8349\u8393\u5976\u84cb", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u73cd\u73e0", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u611b\u5fc3\u9020\u578b\u676f\u84cb", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u661f\u661f\u9020\u578b\u5438\u7ba1", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u793e\u7fa4", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u72d0\u72f8\u8033\u6735\u767c\u7b8d", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u5154\u5b50\u8033\u6735\u767c\u7b8d", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u8c93\u8033\u767c\u7b8d", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u72d0\u72f8\u540a\u98fe\u9805\u934a", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u5c0f\u9234\u943a\u624b\u934a", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u767c\u5e36", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u670d\u98fe\u5e97", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u72d0\u72f8\u767c\u7b8d", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u5927\u578b\u96f6\u98df\u5e97", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u5f69\u8679\u5de7\u514b\u529b", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u8349\u8393\u53e3\u5473\u6d0b\u828b\u7247", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u5c0f\u718a\u9905\u4e7e", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u5e03\u4e01", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u72d0\u72f8\u9020\u578b\u6d0b\u828b\u7247", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u52d5\u7269\u9020\u578b\u8edf\u7cd6", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u5de7\u514b\u529b\u68d2", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u8a66\u8863\u9593", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u5152\u7ae5\u96f6\u98df\u5340", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u62b9\u8336\u86cb\u7cd5\u5377", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u8cfc\u7269\u7c43", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u9577\u6905", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u72d0\u72f8\u9020\u578b\u7684\u6d0b\u828b\u7247", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u96f6\u98df", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u9d3f\u5b50", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u98f2\u6599", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u9905\u4e7e", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u6905\u5b50", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u5bb6", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u65b0\u958b\u7684\u751c\u54c1\u5e97", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "MANUKA", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u6c99\u767c", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "\u89c0\u773e", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "MANUKA", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "\u89c0\u773e", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u5927\u8cbc\u5716", "width": 1.5}, {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "color": {"color": "#AAB7B8", "opacity": 0.8}, "font": {"align": "middle", "background": "rgba(255,255,255,0.7)", "color": "black", "size": 10, "strokeWidth": 0}, "from": "\u89c0\u773e", "smooth": {"roundness": 0.2, "type": "curvedCW"}, "to": "\u5009\u9f20", "width": 1.5}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"physics": {"enabled": false}, "interaction": {"dragNodes": true, "dragView": true, "hideEdgesOnDrag": false, "hideNodesOnDrag": false, "hover": true, "navigationButtons": true, "keyboard": true, "multiselect": true}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+                    network.on("selectNode", neighbourhoodHighlight);
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

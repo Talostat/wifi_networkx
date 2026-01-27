@@ -25,8 +25,7 @@ llm = ChatOpenAI(
 )
 
 # 3. 定義提示詞模板
-system_prompt = """你是一個專業的知識圖譜構建助手。你的目標是從文本中提取實體（Entities）和關係（Relationships）。
-
+system_prompt = """你是一個專業的知識圖譜構建助手，擅長從文本中提取多種類型的實體（Entities）以及它們之間的豐富關係（Relationships）。你的目標是從文本中準確識別實體，並建立它們之間的各種聯繫，不僅包括人物之間的關係，還要特別關注實物、場所、概念等非人物實體之間的聯繫。
 請嚴格遵守以下 JSON 格式輸出，不要包含任何 Markdown 標記或其他文本：
 
 {
@@ -42,19 +41,18 @@ system_prompt = """你是一個專業的知識圖譜構建助手。你的目標�
       "source_entity": "源實體名稱 (必須在 entities 中出現)",
       "target_entity": "目標實體名稱 (必須在 entities 中出現)",
       "relationship_description": "關係描述",
-      "relationship_strength": 1-10 的整數 (表示關係強度)
     }
   ]
 }
 
 注意：
 1. 確保 JSON 格式合法。
-2. 實體名稱應保持原文。
-3. 盡可能提取所有重要的實體和關係。
+2. 實體之間必須要存在關係, 如果沒有關係，請省略該實體。
+3. 實體不作任何推斷,,不確定的實體請忽略。
 """
 
 
-def extract_triples_from_text(text, source_name):
+def extract_triples_by_llm(text):
     """從文本中提取三元組"""
     messages = [
         SystemMessage(content=system_prompt),
@@ -75,7 +73,8 @@ def parse_json_response(response_text):
         pass
 
     # 2. 嘗試提取 Markdown 代碼塊 (```json ... ```)
-    match = re.search(r'```(?:json)?\s*(\{.*?\})\s*```', response_text, re.DOTALL)
+    match = re.search(
+        r'```(?:json)?\s*(\{.*?\})\s*```', response_text, re.DOTALL)
     if match:
         try:
             return json.loads(match.group(1))
@@ -97,6 +96,7 @@ def parse_json_response(response_text):
 
     return None
 
+
 def convert_json_to_text_format(data):
     """將JSON格式轉換為文本格式"""
     lines = []
@@ -112,7 +112,8 @@ def convert_json_to_text_format(data):
                 lines.append(f"[{etype}] {name}: {desc}")
 
         if 'relationships' in data:
-            if lines: lines.append("")
+            if lines:
+                lines.append("")
             lines.append("【關係】")
             for r in data['relationships']:
                 src = r.get('source_entity', '')
@@ -135,7 +136,8 @@ def convert_json_to_text_format(data):
         subjects = event.get('main_subjects', [])
         if subjects:
             main_subject = '和'.join(subjects)
-            lines.append(f"[{event_id}][事件] ({main_subject}, 進行, {event_name})")
+            lines.append(
+                f"[{event_id}][事件] ({main_subject}, 進行, {event_name})")
 
         # 子三元組 - 支持數組格式 [subject, relation, object, category]
         triples = event.get('triples', [])
@@ -153,9 +155,11 @@ def convert_json_to_text_format(data):
                 continue
 
             sub_id = f"{event_id}.{i}"
-            lines.append(f"[{sub_id}][{category}] ({subject}, {relation}, {obj})")
+            lines.append(
+                f"[{sub_id}][{category}] ({subject}, {relation}, {obj})")
 
     return "\n".join(lines)
+
 
 def process_json_file(file_path, source_name, is_conversation=False):
     """處理JSON文件並提取三元組
@@ -182,7 +186,8 @@ def process_json_file(file_path, source_name, is_conversation=False):
             total_messages = len(data)
             num_batches = (total_messages + batch_size - 1) // batch_size
 
-            print(f"\n正在處理 {source_name}，共 {total_messages} 條消息，分 {num_batches} 批次...")
+            print(
+                f"\n正在處理 {source_name}，共 {total_messages} 條消息，分 {num_batches} 批次...")
 
             for batch_idx in range(num_batches):
                 start_idx = batch_idx * batch_size
@@ -198,13 +203,17 @@ def process_json_file(file_path, source_name, is_conversation=False):
                     conversation_lines.append(f"{speaker}: {content}")
                 text_content = "\n".join(conversation_lines)
 
-                print(f"  [批次 {batch_idx + 1}/{num_batches}] 處理第 {start_idx + 1}-{end_idx} 條消息...")
-                response = extract_triples_from_text(text_content, f"{source_name} (批次 {batch_idx + 1})")
+                print(
+                    f"  [批次 {batch_idx + 1}/{num_batches}] 處理第 {start_idx + 1}-{end_idx} 條消息...")
+                response = extract_triples_by_llm(text_content)
                 print(response)
 
                 # 解析JSON
                 parsed_json = parse_json_response(response)
                 if parsed_json:
+                    # 添加批次編號
+                    parsed_json['batch_index'] = batch_idx + 1
+
                     text_output = convert_json_to_text_format(parsed_json)
                     all_parsed_jsons.append(parsed_json)
                     all_text_outputs.append(text_output)
@@ -218,12 +227,15 @@ def process_json_file(file_path, source_name, is_conversation=False):
             # summary.json: 取 summary 欄位（不分批）
             text_content = data.get("summary", "")
             print(f"\n正在提取 {source_name} 的三元組...")
-            response = extract_triples_from_text(text_content, source_name)
+            response = extract_triples_by_llm(text_content)
             print(response)
 
             # 解析JSON
             parsed_json = parse_json_response(response)
             if parsed_json:
+                # 添加批次編號（summary只有一個批次）
+                parsed_json['batch_index'] = 1
+
                 text_output = convert_json_to_text_format(parsed_json)
                 all_parsed_jsons.append(parsed_json)
                 all_text_outputs.append(text_output)
@@ -239,6 +251,7 @@ def process_json_file(file_path, source_name, is_conversation=False):
     except Exception as e:
         print(f"錯誤：{e}")
         return [], []
+
 
 # 4. 選擇要處理的數據源
 print("請選擇要提取三元組的數據源：")
@@ -271,10 +284,17 @@ if choice in ["2", "3"]:
             output_lines.append("")
         output_lines.extend(summary_text_outputs)
 
+if choice == "1":
+    type_name = "messages"
+elif choice == "2":
+    type_name = "summary"
+else:
+    type_name = "both"
 # 5. 儲存結果
 
 # 保存文本格式
-with open("triples_comparison_categorized.txt", "w", encoding="utf-8") as f:
+file_name = f"triples_comparison_categorized_{type_name}"
+with open(f"{file_name}.txt", "w", encoding="utf-8") as f:
     f.write("\n".join(output_lines))
 
 # 保存JSON格式
@@ -285,10 +305,9 @@ json_output = {
     "data": results
 }
 
-with open("triples_comparison_categorized.json", "w", encoding="utf-8") as f:
+with open(f"{file_name}.json", "w", encoding="utf-8") as f:
     json.dump(json_output, f, ensure_ascii=False, indent=2)
 
 print("\n✓ 結果已儲存至:")
-print("  - triples_comparison_categorized.txt (文本格式)")
-print("  - triples_comparison_categorized.json (JSON格式)")
-
+print(f"  - {file_name}.txt (文本格式)")
+print(f"  - {file_name}.json (JSON格式)")

@@ -1,0 +1,793 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "group": "人物",
+      "description": "對話中的主要人物之一，與MANUKA互動，會拿出餅乾、調整發箍、放慢腳步、開門等動作",
+      "degree": 15,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "Kiwi"
+    },
+    {
+      "group": "人物",
+      "description": "對話中的主要人物之一，收到Kiwi的餅乾，戴著狐狸發箍，與Kiwi一起走路回家，計劃直播開箱零食",
+      "degree": 49,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "MANUKA"
+    },
+    {
+      "group": "物品",
+      "description": "Kiwi關上的門，是他們出發的起點",
+      "degree": 1,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "家門"
+    },
+    {
+      "group": "場所",
+      "description": "MANUKA規劃的行程第一站，位於車站前的一家新開的店",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "車站前新開的飲料店"
+    },
+    {
+      "group": "場所",
+      "description": "MANUKA規劃的行程第二站，一間規模很大的服裝店",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "很大的服飾店"
+    },
+    {
+      "group": "場所",
+      "description": "MANUKA規劃的行程第三站，計劃去掃貨購買零食的店",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "零食店"
+    },
+    {
+      "group": "場所",
+      "description": "Kiwi和MANUKA購物後休息的地方，有長椅",
+      "degree": 2,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "公園"
+    },
+    {
+      "group": "動物",
+      "description": "MANUKA和Kiwi在路上看到的一隻貓，被描述為毛茸茸的很可愛",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "貓"
+    },
+    {
+      "group": "概念",
+      "description": "MANUKA自比為狐狸，並提到自己的耳朵。她將貓的尾巴與自己的狐狸耳朵相比較",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "狐狸耳朵"
+    },
+    {
+      "group": "事件",
+      "description": "MANUKA提及的活動，她昨天進行了直播",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "直播"
+    },
+    {
+      "group": "人物",
+      "description": "觀看MANUKA直播的人，送了她一個大貼圖",
+      "degree": 3,
+      "community": 2,
+      "community_color": "#45B7D1",
+      "id": "觀眾"
+    },
+    {
+      "group": "物品",
+      "description": "MANUKA的觀眾在直播時送給她的禮物",
+      "degree": 2,
+      "community": 2,
+      "community_color": "#45B7D1",
+      "id": "大貼圖"
+    },
+    {
+      "group": "動物",
+      "description": "觀眾用倉鼠比喻MANUKA吃東西的樣子，但MANUKA對此比喻不滿，強調自己是狐狸",
+      "degree": 2,
+      "community": 2,
+      "community_color": "#45B7D1",
+      "id": "倉鼠"
+    },
+    {
+      "group": "場所",
+      "description": "MANUKA和Kiwi需要穿越的道路，綠燈時他們牽手過馬路",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "馬路"
+    },
+    {
+      "group": "場所",
+      "description": "販賣飲料的商店，有新品菜單和特殊裝潢",
+      "degree": 2,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "飲料店"
+    },
+    {
+      "group": "物品",
+      "description": "飲料店的一種飲品，MANUKA最終選擇的飲料",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "草莓奶蓋"
+    },
+    {
+      "group": "物品",
+      "description": "飲料的添加物，MANUKA要求加入飲料中",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "珍珠"
+    },
+    {
+      "group": "物品",
+      "description": "飲料店的特殊杯蓋，MANUKA特別要求的",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "愛心造型杯蓋"
+    },
+    {
+      "group": "物品",
+      "description": "飲料店的特殊吸管",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "星星造型吸管"
+    },
+    {
+      "group": "概念",
+      "description": "MANUKA想要上傳照片的社交平台",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "社群"
+    },
+    {
+      "group": "物品",
+      "description": "服飾店中的髮飾，具有狐狸耳朵造型",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "狐狸耳朵發箍"
+    },
+    {
+      "group": "物品",
+      "description": "服飾店中的髮飾，具有兔子耳朵造型",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "兔子耳朵發箍"
+    },
+    {
+      "group": "物品",
+      "description": "服飾店中的髮飾，具有貓耳朵造型",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "貓耳發箍"
+    },
+    {
+      "group": "物品",
+      "description": "服飾店中的項鍊，帶有會發光的小狐狸吊飾",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "狐狸吊飾項鍊"
+    },
+    {
+      "group": "物品",
+      "description": "服飾店中的手鍊，上面裝飾有小鈴鐺",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "小鈴鐺手鍊"
+    },
+    {
+      "group": "物品",
+      "description": "服飾店中的髮飾，顏色與MANUKA的領帶相配",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "發帶"
+    },
+    {
+      "group": "地點",
+      "description": "裝潢可愛的商店，販售各種服飾和飾品",
+      "degree": 2,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "服飾店"
+    },
+    {
+      "group": "物品",
+      "description": "MANUKA戴在頭上的發箍，Kiwi幫忙調整",
+      "degree": 2,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "狐狸發箍"
+    },
+    {
+      "group": "場所",
+      "description": "MANUKA和Kiwi進入的商店，販售各種零食",
+      "degree": 2,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "大型零食店"
+    },
+    {
+      "group": "物品",
+      "description": "零食店中新推出的巧克力產品",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "彩虹巧克力"
+    },
+    {
+      "group": "物品",
+      "description": "零食店中期間限定的洋芋片口味",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "草莓口味洋芋片"
+    },
+    {
+      "group": "物品",
+      "description": "蜜糖牛奶口味的餅乾，MANUKA在公園想吃的零食",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "小熊餅乾"
+    },
+    {
+      "group": "物品",
+      "description": "零食店中新推出的甜點",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "布丁"
+    },
+    {
+      "group": "物品",
+      "description": "包裝為狐狸造型的洋芋片，MANUKA認為是為自己設計的",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "狐狸造型洋芋片"
+    },
+    {
+      "group": "物品",
+      "description": "兒童零食區中的軟糖，有可愛動物造型",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "動物造型軟糖"
+    },
+    {
+      "group": "物品",
+      "description": "零食店中新推出的巧克力產品",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "巧克力棒"
+    },
+    {
+      "group": "場所",
+      "description": "MANUKA跑去試戴髮箍的地方",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "試衣間"
+    },
+    {
+      "group": "場所",
+      "description": "零食店中專門販售兒童零食的區域",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "兒童零食區"
+    },
+    {
+      "group": "物品",
+      "description": "用於裝購物商品的籃子，在對話中多次被提及",
+      "degree": 2,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "購物籃"
+    },
+    {
+      "group": "物品",
+      "description": "期間限定的甜點，MANUKA想購買的商品之一",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "抹茶蛋糕卷"
+    },
+    {
+      "group": "物品",
+      "description": "今天購買的零食，MANUKA計劃明天直播開箱",
+      "degree": 2,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "零食"
+    },
+    {
+      "group": "物品",
+      "description": "MANUKA想在公園吃的零食，打算拍照上傳",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "狐狸造型的洋芋片"
+    },
+    {
+      "group": "物品",
+      "description": "公園中的座椅，Kiwi和MANUKA坐在上面休息",
+      "degree": 2,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "長椅"
+    },
+    {
+      "group": "動物",
+      "description": "MANUKA和Kiwi看到的胖胖的鴿子，後來飛走了",
+      "degree": 2,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "鴿子"
+    },
+    {
+      "group": "物品",
+      "description": "MANUKA的飲料，後來快喝完了",
+      "degree": 2,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "飲料"
+    },
+    {
+      "group": "物品",
+      "description": "Kiwi從購物袋中拿出的新口味餅乾，MANUKA認為很好吃",
+      "degree": 2,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "餅乾"
+    },
+    {
+      "group": "物品",
+      "description": "MANUKA坐著的椅子，她聲稱自己的腳黏在上面了",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "椅子"
+    },
+    {
+      "group": "地點",
+      "description": "Kiwi和MANUKA最終到達的目的地，Kiwi用鑰匙開門進入",
+      "degree": 2,
+      "community": 0,
+      "community_color": "#FF6B6B",
+      "id": "家"
+    },
+    {
+      "group": "地點",
+      "description": "MANUKA提議下次去探險的地點",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "新開的甜品店"
+    },
+    {
+      "group": "物品",
+      "description": "MANUKA回家後想去躺平的地方",
+      "degree": 1,
+      "community": 1,
+      "community_color": "#4ECDC4",
+      "id": "沙發"
+    }
+  ],
+  "links": [
+    {
+      "description": "配合放慢腳步，答應當直播助手",
+      "batch_source": 7,
+      "source": "Kiwi",
+      "target": "MANUKA"
+    },
+    {
+      "description": "關上",
+      "batch_source": 1,
+      "source": "Kiwi",
+      "target": "家門"
+    },
+    {
+      "description": "走向點餐櫃台點餐",
+      "batch_source": 2,
+      "source": "Kiwi",
+      "target": "飲料店"
+    },
+    {
+      "description": "跟隨MANUKA進入服飾店",
+      "batch_source": 3,
+      "source": "Kiwi",
+      "target": "服飾店"
+    },
+    {
+      "description": "跟著MANUKA走進零食店",
+      "batch_source": 4,
+      "source": "Kiwi",
+      "target": "大型零食店"
+    },
+    {
+      "description": "接過並提著",
+      "batch_source": 5,
+      "source": "Kiwi",
+      "target": "購物籃"
+    },
+    {
+      "description": "和MANUKA一起去",
+      "batch_source": 5,
+      "source": "Kiwi",
+      "target": "公園"
+    },
+    {
+      "description": "坐下休息",
+      "batch_source": 5,
+      "source": "Kiwi",
+      "target": "長椅"
+    },
+    {
+      "description": "靜靜地看著飛走",
+      "batch_source": 6,
+      "source": "Kiwi",
+      "target": "鴿子"
+    },
+    {
+      "description": "提供給MANUKA",
+      "batch_source": 6,
+      "source": "Kiwi",
+      "target": "飲料"
+    },
+    {
+      "description": "提議幫MANUKA拿",
+      "batch_source": 6,
+      "source": "Kiwi",
+      "target": "零食"
+    },
+    {
+      "description": "拿出並遞給MANUKA",
+      "batch_source": 7,
+      "source": "Kiwi",
+      "target": "餅乾"
+    },
+    {
+      "description": "幫忙調整",
+      "batch_source": 7,
+      "source": "Kiwi",
+      "target": "狐狸發箍"
+    },
+    {
+      "description": "用鑰匙開門進入",
+      "batch_source": 7,
+      "source": "Kiwi",
+      "target": "家"
+    },
+    {
+      "description": "感謝Kiwi，要求幫忙拿零食",
+      "batch_source": 7,
+      "source": "MANUKA",
+      "target": "Kiwi"
+    },
+    {
+      "description": "規劃前往，作為行程第一站",
+      "batch_source": 1,
+      "source": "MANUKA",
+      "target": "車站前新開的飲料店"
+    },
+    {
+      "description": "規劃前往，作為行程第二站",
+      "batch_source": 1,
+      "source": "MANUKA",
+      "target": "很大的服飾店"
+    },
+    {
+      "description": "規劃前往掃貨，作為行程第三站",
+      "batch_source": 1,
+      "source": "MANUKA",
+      "target": "零食店"
+    },
+    {
+      "description": "提議去休息",
+      "batch_source": 5,
+      "source": "MANUKA",
+      "target": "公園"
+    },
+    {
+      "description": "看到並評論其可愛，將它的尾巴與自己的狐狸耳朵比較",
+      "batch_source": 1,
+      "source": "MANUKA",
+      "target": "貓"
+    },
+    {
+      "description": "擁有並引以為傲，認為比貓的尾巴可愛",
+      "batch_source": 1,
+      "source": "MANUKA",
+      "target": "狐狸耳朵"
+    },
+    {
+      "description": "昨天進行了",
+      "batch_source": 1,
+      "source": "MANUKA",
+      "target": "直播"
+    },
+    {
+      "description": "收到",
+      "batch_source": 1,
+      "source": "MANUKA",
+      "target": "大貼圖"
+    },
+    {
+      "description": "被觀眾比喻為倉鼠，但對此不滿並否認",
+      "batch_source": 1,
+      "source": "MANUKA",
+      "target": "倉鼠"
+    },
+    {
+      "description": "提醒Kiwi綠燈了，要一起過馬路",
+      "batch_source": 1,
+      "source": "MANUKA",
+      "target": "馬路"
+    },
+    {
+      "description": "走到店前並查看菜單",
+      "batch_source": 2,
+      "source": "MANUKA",
+      "target": "飲料店"
+    },
+    {
+      "description": "選擇並點購這款飲料",
+      "batch_source": 2,
+      "source": "MANUKA",
+      "target": "草莓奶蓋"
+    },
+    {
+      "description": "要求加入飲料中",
+      "batch_source": 2,
+      "source": "MANUKA",
+      "target": "珍珠"
+    },
+    {
+      "description": "特別要求使用這個杯蓋",
+      "batch_source": 2,
+      "source": "MANUKA",
+      "target": "愛心造型杯蓋"
+    },
+    {
+      "description": "注意到並使用這個吸管",
+      "batch_source": 2,
+      "source": "MANUKA",
+      "target": "星星造型吸管"
+    },
+    {
+      "description": "想要拍照上傳到這個平台",
+      "batch_source": 2,
+      "source": "MANUKA",
+      "target": "社群"
+    },
+    {
+      "description": "發現並試戴狐狸耳朵發箍",
+      "batch_source": 3,
+      "source": "MANUKA",
+      "target": "狐狸耳朵發箍"
+    },
+    {
+      "description": "發現並試戴兔子耳朵發箍",
+      "batch_source": 3,
+      "source": "MANUKA",
+      "target": "兔子耳朵發箍"
+    },
+    {
+      "description": "發現貓耳發箍並感到興奮",
+      "batch_source": 3,
+      "source": "MANUKA",
+      "target": "貓耳發箍"
+    },
+    {
+      "description": "發現狐狸吊飾項鍊並認為與自己造型相配",
+      "batch_source": 3,
+      "source": "MANUKA",
+      "target": "狐狸吊飾項鍊"
+    },
+    {
+      "description": "發現小鈴鐺手鍊並認為很可愛",
+      "batch_source": 3,
+      "source": "MANUKA",
+      "target": "小鈴鐺手鍊"
+    },
+    {
+      "description": "發現發帶並認為顏色與自己的領帶很搭",
+      "batch_source": 3,
+      "source": "MANUKA",
+      "target": "發帶"
+    },
+    {
+      "description": "進入服飾店並瀏覽商品",
+      "batch_source": 3,
+      "source": "MANUKA",
+      "target": "服飾店"
+    },
+    {
+      "description": "戴在頭上",
+      "batch_source": 7,
+      "source": "MANUKA",
+      "target": "狐狸發箍"
+    },
+    {
+      "description": "進入並對店內商品感到興奮",
+      "batch_source": 4,
+      "source": "MANUKA",
+      "target": "大型零食店"
+    },
+    {
+      "description": "發現是新出的產品並感到興奮",
+      "batch_source": 4,
+      "source": "MANUKA",
+      "target": "彩虹巧克力"
+    },
+    {
+      "description": "發現是期間限定產品並感到興奮",
+      "batch_source": 4,
+      "source": "MANUKA",
+      "target": "草莓口味洋芋片"
+    },
+    {
+      "description": "想吃",
+      "batch_source": 5,
+      "source": "MANUKA",
+      "target": "小熊餅乾"
+    },
+    {
+      "description": "發現新出的布丁並想購買",
+      "batch_source": 4,
+      "source": "MANUKA",
+      "target": "布丁"
+    },
+    {
+      "description": "發現包裝是狐狸造型並認為是為自己設計",
+      "batch_source": 4,
+      "source": "MANUKA",
+      "target": "狐狸造型洋芋片"
+    },
+    {
+      "description": "發現可愛動物造型並想購買",
+      "batch_source": 4,
+      "source": "MANUKA",
+      "target": "動物造型軟糖"
+    },
+    {
+      "description": "發現新出的產品並想購買",
+      "batch_source": 4,
+      "source": "MANUKA",
+      "target": "巧克力棒"
+    },
+    {
+      "description": "跑向試衣間去試戴髮箍",
+      "batch_source": 4,
+      "source": "MANUKA",
+      "target": "試衣間"
+    },
+    {
+      "description": "在該區域發現動物造型軟糖",
+      "batch_source": 4,
+      "source": "MANUKA",
+      "target": "兒童零食區"
+    },
+    {
+      "description": "想購買",
+      "batch_source": 5,
+      "source": "MANUKA",
+      "target": "抹茶蛋糕卷"
+    },
+    {
+      "description": "裝滿了零食",
+      "batch_source": 5,
+      "source": "MANUKA",
+      "target": "購物籃"
+    },
+    {
+      "description": "坐下休息",
+      "batch_source": 5,
+      "source": "MANUKA",
+      "target": "長椅"
+    },
+    {
+      "description": "想吃並打算拍照",
+      "batch_source": 5,
+      "source": "MANUKA",
+      "target": "狐狸造型的洋芋片"
+    },
+    {
+      "description": "計劃明天直播開箱",
+      "batch_source": 7,
+      "source": "MANUKA",
+      "target": "零食"
+    },
+    {
+      "description": "看到並評論",
+      "batch_source": 6,
+      "source": "MANUKA",
+      "target": "鴿子"
+    },
+    {
+      "description": "擁有並飲用",
+      "batch_source": 6,
+      "source": "MANUKA",
+      "target": "飲料"
+    },
+    {
+      "description": "收到並稱讚好吃",
+      "batch_source": 7,
+      "source": "MANUKA",
+      "target": "餅乾"
+    },
+    {
+      "description": "坐在上面並聲稱腳黏住了",
+      "batch_source": 6,
+      "source": "MANUKA",
+      "target": "椅子"
+    },
+    {
+      "description": "與Kiwi一起到達",
+      "batch_source": 7,
+      "source": "MANUKA",
+      "target": "家"
+    },
+    {
+      "description": "提議下次去探險",
+      "batch_source": 7,
+      "source": "MANUKA",
+      "target": "新開的甜品店"
+    },
+    {
+      "description": "回家後想去躺平",
+      "batch_source": 7,
+      "source": "MANUKA",
+      "target": "沙發"
+    },
+    {
+      "description": "觀看其直播並送禮物",
+      "batch_source": 1,
+      "source": "觀眾",
+      "target": "MANUKA"
+    },
+    {
+      "description": "贈送給MANUKA",
+      "batch_source": 1,
+      "source": "觀眾",
+      "target": "大貼圖"
+    },
+    {
+      "description": "用倉鼠比喻MANUKA吃東西的樣子",
+      "batch_source": 1,
+      "source": "觀眾",
+      "target": "倉鼠"
+    }
+  ]
+}
